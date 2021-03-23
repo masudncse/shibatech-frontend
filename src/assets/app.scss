@@ -1,11 +1,59 @@
+// @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
+
+body,
+html {
+  margin: 0 auto;
+  padding: 0;
+  // font-family: "Raleway", sans-serif;
+  // font-family: 'Poppins', sans-serif;
+  font-family: "Lato", sans-serif !important;
+  font-size: 16px;
+}
+
 .ant-form-item-label {
   padding-bottom: 3px !important;
 
   label {
     margin-bottom: 0;
+    font-size: 14px;
   }
+}
+
+.anticon{
+  vertical-align: 0px;
 }
 
 .masudulkabir {
   background-color: red;
+}
+
+.page--title {
+  padding: 16px 0 16px 0 !important;
+}
+
+.info-block {
+  display: flex;
+  &__icon {
+    background-color: #f1c40f;
+    width: 90px;
+    height: 90px;
+    box-sizing: border-box;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      font-size: 60px;
+      color: #ffffff;
+    }
+  }
+  &__info {
+    a {
+      font-size: 14px;
+      line-height: normal;
+    }
+  }
 }

@@ -26,7 +26,7 @@
             <a-sub-menu key="sub1">
               <span slot="title"><a-icon type="user" />Vendors</span>
               <a-menu-item key="1">
-                <router-link to="/vendors/add">Add Vendor</router-link>
+                <router-link to="/vendors/add">Add New</router-link>
               </a-menu-item>
               <a-menu-item key="2">
                 <router-link to="/vendors">All Vendor</router-link>
@@ -49,21 +49,8 @@
           </a-menu>
         </a-layout-sider>
         <a-layout style="padding: 0 24px 24px">
-          <a-breadcrumb style="margin: 16px 0">
-            <a-breadcrumb-item>Home</a-breadcrumb-item>
-            <a-breadcrumb-item>List</a-breadcrumb-item>
-            <a-breadcrumb-item>App</a-breadcrumb-item>
-          </a-breadcrumb>
-          <a-layout-content
-            :style="{
-              background: '#fff',
-              padding: '24px',
-              margin: 0,
-              minHeight: '280px',
-            }"
-          >
-            <router-view></router-view>
-          </a-layout-content>
+          <router-view></router-view>
+
           <a-layout-footer style="text-align: center">
             Ant Design ©2018 Created by Ant UED
           </a-layout-footer>

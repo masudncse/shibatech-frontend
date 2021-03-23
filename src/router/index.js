@@ -21,6 +21,15 @@ const routes = [
         path: "/vendors/add",
         component: () => import("../views/vendor/AddVendor.vue"),
       },
+      {
+        path: "/vendors/:id/edit",
+        component: () => import("../views/vendor/EditVendor.vue"),
+      },
+
+      {
+        path: "/vendors/:id/details",
+        component: () => import("../views/vendor/VendorDetails.vue"),
+      },
     ],
   },
   {
