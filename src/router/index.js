@@ -1,17 +1,17 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Dashboard from "../views/dashboard/Dashboard.vue";
+import Master from "../views/layouts/Master.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    component: Dashboard,
+    component: Master,
     children: [
       {
         path: "",
-        component: () => import("../views/About.vue"),
+        component: () => import("../views/dashboard/Dashboard.vue"),
       },
       {
         path: "/vendors",

@@ -56,7 +56,7 @@
           <a-button @click="$router.push('/vendors/1/edit')">Edit</a-button>
           <a-button class="ml-2">Send Email</a-button>
           <a-dropdown>
-            <a-menu slot="overlay" @click="handleMenuClick">
+            <a-menu slot="overlay">
               <a-menu-item key="1"> Delete Vendor </a-menu-item>
               <a-menu-item key="2"> Duplicate </a-menu-item>
               <a-menu-item key="3"> Create Purchase Order </a-menu-item>
@@ -64,10 +64,10 @@
             <a-button class="ml-2"> More <a-icon type="down" /> </a-button>
           </a-dropdown>
           <a-button-group class="ml-2">
-            <a-button @click="decline">
+            <a-button>
               <a-icon type="left" />
             </a-button>
-            <a-button @click="increase">
+            <a-button>
               <a-icon type="right" />
             </a-button>
           </a-button-group>
@@ -121,12 +121,7 @@
         minHeight: '280px',
       }"
     >
-      <a-form
-        :form="form"
-        :label-col="{ span: 6 }"
-        :wrapper-col="{ span: 12 }"
-        @submit="handleSubmit"
-      >
+      <a-form :form="form" :label-col="{ span: 6 }" :wrapper-col="{ span: 12 }">
         <a-card title="Basic Information">
           <a-row :gutter="15">
             <a-col :span="12">
@@ -260,21 +255,6 @@ export default {
       ],
     };
   },
-  methods: {
-    handleSubmit(e) {
-      e.preventDefault();
-      this.form.validateFields((err, values) => {
-        if (!err) {
-          console.log("Received values of form: ", values);
-        }
-      });
-    },
-    handleSelectChange(value) {
-      console.log(value);
-      this.form.setFieldsValue({
-        note: `Hi, ${value === "male" ? "man" : "lady"}!`,
-      });
-    },
-  },
+  methods: {},
 };
 </script>
