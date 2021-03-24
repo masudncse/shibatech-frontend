@@ -30,8 +30,25 @@ const routes = [
         path: "/vendors/:id/details",
         component: () => import("../views/vendor/VendorDetails.vue"),
       },
+      {
+        path: "/unit/all",
+        component: () => import("../views/Unit/UnitList.vue"),
+      },
+      {
+        path: "/unit/add",
+        component: () => import("../views/Unit/AddUnit.vue"),
+      },
+      {
+        path: "/unit/:id/edit",
+        component: () => import("../views/Unit/UnitEdit.vue"),
+      },
+      {
+        path: "/unit/:id/details",
+        component: () => import("../views/Unit/UnitDetails.vue"),
+      },
     ],
   },
+  
   {
     path: "/login",
     component: () => import("../views/auth/Login.vue"),
