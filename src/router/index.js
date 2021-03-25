@@ -46,6 +46,22 @@ const routes = [
         path: "/unit/:id/details",
         component: () => import("../views/Unit/UnitDetails.vue"),
       },
+      {
+        path: "/catagorey/add",
+        component: () => import("../views/Catagorey/CatagoreyAdd.vue"),
+      },
+      {
+        path: "/catagorey/all",
+        component: () => import("../views/Catagorey/CatagoreyList.vue"),
+      },
+      {
+        path: "/catagorey/:id/edit",
+        component: () => import("../views/Catagorey/CatagoreyEdit.vue"),
+      },
+      {
+        path: "/Catagorey/:id/details",
+        component: () => import("../views/Catagorey/CatagoreyDetails.vue"),
+      },
     ],
   },
   

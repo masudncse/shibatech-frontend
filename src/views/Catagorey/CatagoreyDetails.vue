@@ -5,9 +5,9 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/vendors">Units</router-link></a-breadcrumb-item
+            ><router-link to="/catagorey/all">Catagorey</router-link></a-breadcrumb-item
           >
-          <a-breadcrumb-item>Unit A</a-breadcrumb-item>
+          <a-breadcrumb-item>Electronic</a-breadcrumb-item>
         </a-breadcrumb>
       </a-col>
     </a-row>
@@ -28,7 +28,7 @@
               
             </div>
             <div class="info-block__info">
-              <h5>Unit A</h5>
+              <h5>Electronic</h5>
            
               <a
                 href="http://google.com"
@@ -43,15 +43,15 @@
           <a-button
             type="primary"
             icon="plus"
-            @click="$router.push('/unit/add')"
-            >Add Unit</a-button
+            @click="$router.push('/catagorey/add')"
+            >Catagorey Add</a-button
           >
           <div class="mb-2"></div>
-          <a-button @click="$router.push('/unit/1/edit')">Edit</a-button>
+          <a-button @click="$router.push('/catagorey/1/edit')">Edit</a-button>
           <a-button class="ml-2">Send Email</a-button>
           <a-dropdown>
             <a-menu slot="overlay">
-              <a-menu-item key="1"> Delete Unit </a-menu-item>
+              <a-menu-item key="1"> Delete Catagorey </a-menu-item>
               <a-menu-item key="2"> Duplicate </a-menu-item>
            
             </a-menu>
@@ -119,23 +119,24 @@
         <a-card title="Basic Information">
           <a-row :gutter="15">
             <a-col :span="12">
-              <a-form-item label="Unit Name" labelAlign="left" class="mb-1">
-                Unit A
+              <a-form-item label="Catagorey Name" labelAlign="left" class="mb-1">
+                Electronic
               </a-form-item>
             </a-col>
-                <a-col :span="12">
+              <a-col :span="12">
               <a-form-item label="Active Status" labelAlign="left" class="mb-1">
                                <a-checkbox @change="onChange" default-checked>
     
   </a-checkbox>
               </a-form-item>
             </a-col>
-          
             <a-col :span="12">
               <a-form-item label="Created Time" labelAlign="left" class="mb-1">
                 2021-01-27 04:03 AM
               </a-form-item>
             </a-col>
+        
+    
             <a-col :span="12">
               <a-form-item label="Website" labelAlign="left" class="mb-1">
                 http://google.com
@@ -196,7 +197,7 @@ export default {
         },
         {
           path: "first",
-          breadcrumbName: "Vendors",
+          breadcrumbName: "Catagorey",
         },
         {
           path: "second",

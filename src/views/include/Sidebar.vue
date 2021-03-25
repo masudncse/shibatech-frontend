@@ -30,6 +30,15 @@
                 <router-link to="/unit/all">All Units</router-link>
               </a-menu-item>
             </a-sub-menu>
+                    <a-sub-menu key="catagory">
+              <span slot="title"><a-icon type="deployment-unit" />Catagorey</span>
+              <a-menu-item key="5">
+                <router-link to="/catagorey/add">Add New</router-link>
+              </a-menu-item>
+              <a-menu-item key="6">
+                <router-link to="/catagorey/all">All Catagorey</router-link>
+              </a-menu-item>
+            </a-sub-menu>
           </a-menu>
         </a-layout-sider>
 </template>>
