@@ -1,10 +1,10 @@
 <template>
-  <div class="add-catagorey">
+  <div class="add-country">
     <a-row>
       <a-col :span="24">
         <a-page-header
           class="page--title"
-          title="Creating New Catagorey"
+          title="Editing this Country"
           :breadcrumb="{ props: { routes } }"
           sub-title=""
         />
@@ -27,10 +27,10 @@
         <a-card title="Basic Information">
           <a-row :gutter="15">
             <a-col :span="12">
-              <a-form-item label="Catagorey Name" labelAlign="left" class="mb-1">
+              <a-form-item label="Country Name" labelAlign="left" class="mb-1">
                 <a-input
                   v-decorator="[
-                    'catagorey_name',
+                    'country_name',
                     {
                       rules: [
                         { required: true, message: 'Please input your note!' },
@@ -42,7 +42,7 @@
             </a-col>
             <a-col :span="12">
               <a-form-item label="Active status" labelAlign="left" class="mb-1">
-                <a-checkbox @change="onChange">
+                <a-checkbox @change="onChange" default-checked>
     
   </a-checkbox>
               </a-form-item>
@@ -73,7 +73,7 @@
         }"
       >
         <a-form-item :wrapper-col="{ span: 24 }" class="text-right mb-0">
-          <a-button type="primary" html-type="submit"> Submit </a-button>
+          <a-button type="primary" html-type="submit"> Update </a-button>
           <a-button
             type="danger"
             html-type="reset"
@@ -100,11 +100,11 @@ export default {
         },
         {
           path: "first",
-          breadcrumbName: "Catagorey",
+          breadcrumbName: "country",
         },
         {
           path: "second",
-          breadcrumbName: "Creating",
+          breadcrumbName: "Editing",
         },
       ],
     };

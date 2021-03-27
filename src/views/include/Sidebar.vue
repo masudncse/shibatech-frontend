@@ -39,6 +39,45 @@
                 <router-link to="/catagorey/all">All Catagorey</router-link>
               </a-menu-item>
             </a-sub-menu>
+                     <a-sub-menu key="countries">
+              <span slot="title"><a-icon type="deployment-unit" />Countries</span>
+              <a-menu-item key="7">
+                <router-link to="/country/add">Add New</router-link>
+              </a-menu-item>
+              <a-menu-item key="8">
+                <router-link to="/country/all">All Countries</router-link>
+              </a-menu-item>
+            </a-sub-menu>
+                     <a-sub-menu key="States">
+              <span slot="title"><a-icon type="deployment-unit" />States</span>
+              <a-menu-item key="9">
+                <router-link to="/state/add">Add New</router-link>
+              </a-menu-item>
+              <a-menu-item key="10">
+                <router-link to="/state/all">All State</router-link>
+              </a-menu-item>
+
+            </a-sub-menu>
+                  <a-sub-menu key="City">
+              <span slot="title"><a-icon type="deployment-unit" />City</span>
+              <a-menu-item key="11">
+                <router-link to="/city/add">Add New</router-link>
+              </a-menu-item>
+              <a-menu-item key="12">
+                <router-link to="/city/all">All city</router-link>
+              </a-menu-item>
+            </a-sub-menu>
+            
+                  <a-sub-menu key="product">
+              <span slot="title"><a-icon type="star" />Product</span>
+              <a-menu-item key="13">
+                <router-link to="/product/add">Add New</router-link>
+              </a-menu-item>
+              <a-menu-item key="14">
+                <router-link to="/product/all">All Product</router-link>
+              </a-menu-item>
+            </a-sub-menu>
+
           </a-menu>
         </a-layout-sider>
 </template>>

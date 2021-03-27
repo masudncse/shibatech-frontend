@@ -1,10 +1,10 @@
 <template>
-  <div class="add-catagorey">
+  <div class="add-country">
     <a-row>
       <a-col :span="24">
         <a-page-header
           class="page--title"
-          title="Creating New Catagorey"
+          title="Editing New States"
           :breadcrumb="{ props: { routes } }"
           sub-title=""
         />
@@ -27,17 +27,19 @@
         <a-card title="Basic Information">
           <a-row :gutter="15">
             <a-col :span="12">
-              <a-form-item label="Catagorey Name" labelAlign="left" class="mb-1">
-                <a-input
+              <a-form-item label="State Name" labelAlign="left" class="mb-1">
+                <a-input 
+              
                   v-decorator="[
-                    'catagorey_name',
+                    'State name',
                     {
                       rules: [
                         { required: true, message: 'Please input your note!' },
                       ],
                     },
                   ]"
-                />
+               />
+               
               </a-form-item>
             </a-col>
             <a-col :span="12">
@@ -46,24 +48,36 @@
     
   </a-checkbox>
               </a-form-item>
+             
             </a-col>
            
-           
+                  <a-col :span="12">
+                      <a-form-item label="Country" labelAlign="left" class="mb-1">
+               <a-select
+    show-search
+    :value="value"
+    placeholder="Search your Country"
+    style="width: 200px"
+    :default-active-first-option="false"
+    :show-arrow="false"
+    :filter-option="false"
+    :not-found-content="null"
+    @search="handleSearch"
+    @change="handleChange"
+  >
+    <a-select-option v-for="d in data" :key="d.value">
+      {{ d.text }}
+    </a-select-option>
+  </a-select>
+             </a-form-item>
+            </a-col>
             
           </a-row>
         </a-card>
         <br />
       
         <br />
-        <a-card title="Description Details">
-          <a-row :gutter="15">
-            <a-col :span="12">
-              <a-form-item label="Description" labelAlign="left" class="mb-0">
-                <a-textarea :auto-size="{ minRows: 4, maxRows: 6 }" />
-              </a-form-item>
-            </a-col>
-          </a-row>
-        </a-card>
+      
       </a-layout-content>
       <a-layout-content
         :style="{
@@ -73,7 +87,7 @@
         }"
       >
         <a-form-item :wrapper-col="{ span: 24 }" class="text-right mb-0">
-          <a-button type="primary" html-type="submit"> Submit </a-button>
+          <a-button type="primary" html-type="submit"> Update </a-button>
           <a-button
             type="danger"
             html-type="reset"
@@ -88,9 +102,48 @@
 </template>
 
 <script>
+import jsonp from 'fetch-jsonp';
+import querystring from 'querystring';
+
+let timeout;
+let currentValue;
+
+function fetch(value, callback) {
+  if (timeout) {
+    clearTimeout(timeout);
+    timeout = null;
+  }
+  currentValue = value;
+
+  function fake() {
+    const str = querystring.encode({
+      code: 'utf-8',
+      q: value,
+    });
+    jsonp(`https://suggest.taobao.com/sug?${str}`)
+      .then(response => response.json())
+      .then(d => {
+        if (currentValue === value) {
+          const result = d.result;
+          const data = [];
+          result.forEach(r => {
+            data.push({
+              value: r[0],
+              text: r[0],
+            });
+          });
+          callback(data);
+        }
+      });
+  }
+
+  timeout = setTimeout(fake, 300);
+}
 export default {
   data() {
     return {
+      data: [],
+      value: undefined,
       formLayout: "horizontal",
       form: this.$form.createForm(this, { name: "coordinated" }),
       routes: [
@@ -100,19 +153,30 @@ export default {
         },
         {
           path: "first",
-          breadcrumbName: "Catagorey",
+          breadcrumbName: "State",
         },
         {
           path: "second",
-          breadcrumbName: "Creating",
+          breadcrumbName: "Editing",
         },
       ],
+    
     };
   },
   methods: {
+           handleSearch(value) {
+      fetch(value, data => (this.data = data));
+    },
+    handleChange(value) {
+      console.log(value);
+      this.value = value;
+      fetch(value, data => (this.data = data));
+    },
+  
      onChange(e) {
       alert(`checked = ${e.target.checked}`);
     },
+  
     handleSubmit(e) {
       e.preventDefault();
       this.form.validateFields((err, values) => {

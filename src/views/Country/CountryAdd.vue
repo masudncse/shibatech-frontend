@@ -1,10 +1,10 @@
 <template>
-  <div class="add-catagorey">
+  <div class="add-country">
     <a-row>
       <a-col :span="24">
         <a-page-header
           class="page--title"
-          title="Creating New Catagorey"
+          title="Creating New Country"
           :breadcrumb="{ props: { routes } }"
           sub-title=""
         />
@@ -27,17 +27,18 @@
         <a-card title="Basic Information">
           <a-row :gutter="15">
             <a-col :span="12">
-              <a-form-item label="Catagorey Name" labelAlign="left" class="mb-1">
-                <a-input
+              <a-form-item label="Country Name" labelAlign="left" class="mb-1">
+                <a-input 
+              
                   v-decorator="[
-                    'catagorey_name',
+                    'Country name',
                     {
                       rules: [
                         { required: true, message: 'Please input your note!' },
                       ],
                     },
                   ]"
-                />
+               />
               </a-form-item>
             </a-col>
             <a-col :span="12">
@@ -46,6 +47,7 @@
     
   </a-checkbox>
               </a-form-item>
+             
             </a-col>
            
            
@@ -91,6 +93,7 @@
 export default {
   data() {
     return {
+      
       formLayout: "horizontal",
       form: this.$form.createForm(this, { name: "coordinated" }),
       routes: [
@@ -100,19 +103,21 @@ export default {
         },
         {
           path: "first",
-          breadcrumbName: "Catagorey",
+          breadcrumbName: "country",
         },
         {
           path: "second",
           breadcrumbName: "Creating",
         },
       ],
+    
     };
   },
   methods: {
      onChange(e) {
       alert(`checked = ${e.target.checked}`);
     },
+  
     handleSubmit(e) {
       e.preventDefault();
       this.form.validateFields((err, values) => {
