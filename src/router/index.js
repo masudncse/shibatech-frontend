@@ -62,6 +62,70 @@ const routes = [
         path: "/Catagorey/:id/details",
         component: () => import("../views/Catagorey/CatagoreyDetails.vue"),
       },
+      {
+        path: "/country/add",
+        component: () => import("../views/Country/CountryAdd.vue"),
+      },
+      {
+        path: "/country/all",
+        component: () => import("../views/Country/CountryList.vue"),
+      },
+      {
+        path: "/country/:id/details",
+        component: () => import("../views/Country/CountryDetails.vue"),
+      },
+      {
+        path: "/country/:id/edit",
+        component: () => import("../views/Country/CountryEdit.vue"),
+      },
+      {
+        path: "/state/add",
+        component: () => import("../views/State/StateAdd.vue"),
+      },
+      {
+        path: "/state/all",
+        component: () => import("../views/State/StateList.vue"),
+      },
+      {
+        path: "/state/:id/edit",
+        component: () => import("../views/State/StateEdit.vue"),
+      },
+      {
+        path: "/state/:id/details",
+        component: () => import("../views/State/StateDetails.vue"),
+      },
+      {
+        path: "/city/add",
+        component: () => import("../views/City/CityAdd.vue"),
+      },
+      {
+        path: "/city/all",
+        component: () => import("../views/City/CityList.vue"),
+      },
+      {
+        path: "/city/:id/edit",
+        component: () => import("../views/City/CityEdit.vue"),
+      },
+      {
+        path: "/city/:id/details",
+        component: () => import("../views/City/CityDetails.vue"),
+      },
+      {
+        path: "/product/add",
+        component: () => import("../views/Product/ProductAdd.vue"),
+      },
+      {
+      path: "/product/all",
+      component: () => import("../views/Product/ProductList.vue"),
+    },
+    {
+      path: "/product/:id/details",
+      component: () => import("../views/Product/ProductDetails.vue"),
+    },
+    {
+      path: "/product/:id/edit",
+      component: () => import("../views/Product/ProductEdit.vue"),
+    },
     ],
   },
   
