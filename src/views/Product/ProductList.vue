@@ -5,7 +5,9 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/product/all">Product </router-link></a-breadcrumb-item
+            ><router-link to="/product/all"
+              >Product
+            </router-link></a-breadcrumb-item
           >
           <a-breadcrumb-item>All</a-breadcrumb-item>
         </a-breadcrumb>
@@ -37,7 +39,7 @@
         <a-form-item>
           <a-input placeholder="Product Name"> </a-input>
         </a-form-item>
-        
+
         <a-form-item>
           <a-button type="primary" html-type="submit">
             <a-icon type="search" /> Submit
@@ -90,20 +92,17 @@
       >
         <span slot="name" slot-scope="text">{{ text }}</span>
         <a slot="Catagorey name" slot-scope="text">{{ text }}</a>
-       
+
         <a slot="Minufecture name" slot-scope="text">{{ text }}</a>
         <a slot="Vendor name" slot-scope="text">{{ text }}</a>
         <a slot="Unit name" slot-scope="text">{{ text }}</a>
-         <a slot="Stock Quantity" slot-scope="text">{{ text }}</a>
-         <a slot="Recoder Lavel" slot-scope="text">{{ text }}</a>
-         
-        
+        <a slot="Stock Quantity" slot-scope="text">{{ text }}</a>
+        <a slot="Recoder Lavel" slot-scope="text">{{ text }}</a>
+
         <div slot="Active Status" slot-scope="">
-             <a-checkbox @change="onChange">
-   
-  </a-checkbox>
+          <a-checkbox> </a-checkbox>
         </div>
-        
+
         <div slot="action" slot-scope="text, record">
           <a-button-group>
             <a-popconfirm
@@ -141,51 +140,48 @@ const columns = [
     width: "20%",
     scopedSlots: { customRender: "City name" },
   },
-    {
+  {
     title: "Catagorey name ",
     dataIndex: "catagorey",
     key: "catagorey",
     sorter: true,
     scopedSlots: { customRender: "Catagorey Name" },
   },
-   {
+  {
     title: "Minufecture name",
     dataIndex: "minufecture",
     key: "minufecture",
     width: "10%",
     scopedSlots: { customRender: "Minufecture name" },
   },
-     {
+  {
     title: "Vendor name",
     dataIndex: "vendor",
     key: "vendor",
     width: "10%",
     scopedSlots: { customRender: "Vendor name" },
   },
-       {
+  {
     title: "Unit name",
     dataIndex: "unit",
     key: "unit",
     width: "10%",
     scopedSlots: { customRender: "Unit name" },
   },
-      {
+  {
     title: "Recoder lavel",
     dataIndex: "recoder",
-    key: "unit",
+    key: "lavel",
     width: "10%",
     scopedSlots: { customRender: "Unit name" },
   },
   {
     title: "Active Status",
     dataIndex: "",
-    key: "x",
+    key: "xe",
     width: "10%",
     scopedSlots: { customRender: "Active Status" },
   },
-   
-
-
   {
     title: "Action",
     dataIndex: "",
@@ -199,34 +195,29 @@ const data = [
   {
     id: "1",
     name: "Fan",
-    catagorey:"Electronic",
-    minufecture:"walton",
-    vendor:"Hardid Sing",
-    unit:"A",
-    recoder:"example",
-  
+    catagorey: "Electronic",
+    minufecture: "walton",
+    vendor: "Hardid Sing",
+    unit: "A",
+    recoder: "example",
   },
   {
-     id: "2",
+    id: "2",
     name: "Fridge",
-    catagorey:"Electronic",
-    minufecture:"Jumuna",
-    vendor:"Maidul islam",
-    unit:"B",
-    recoder:"example",
-  
-
-   
+    catagorey: "Electronic",
+    minufecture: "Jumuna",
+    vendor: "Maidul islam",
+    unit: "B",
+    recoder: "example",
   },
-  { id: "3",
+  {
+    id: "3",
     name: "Ac",
-    catagorey:"Electronic",
-    minufecture:"walton",
-    vendor:"Hardid Sing",
-    unit:"C",
-    recoder:"example",
-  
- 
+    catagorey: "Electronic",
+    minufecture: "walton",
+    vendor: "Hardid Sing",
+    unit: "C",
+    recoder: "example",
   },
 ];
 

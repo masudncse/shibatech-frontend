@@ -37,7 +37,7 @@
         <a-form-item>
           <a-input placeholder="Unit Name"> </a-input>
         </a-form-item>
-      
+
         <a-form-item>
           <a-button type="primary" html-type="submit">
             <a-icon type="search" /> Submit
@@ -91,9 +91,7 @@
         <span slot="name" slot-scope="text">{{ text }}</span>
 
         <div slot="Active Status" slot-scope="">
-             <a-checkbox @change="onChange">
-   
-  </a-checkbox>
+          <a-checkbox @change="onChange"> </a-checkbox>
         </div>
 
         <div slot="action" slot-scope="text, record">
@@ -125,8 +123,6 @@
 import reqwest from "reqwest";
 
 const columns = [
- 
-
   {
     title: "Units Name ",
     dataIndex: "name",
@@ -142,11 +138,10 @@ const columns = [
     width: "10%",
     scopedSlots: { customRender: "Active Status" },
   },
-
   {
     title: "Action",
     dataIndex: "",
-    key: "x",
+    key: "t",
     width: "10%",
     scopedSlots: { customRender: "action" },
   },
@@ -161,7 +156,7 @@ const data = [
     id: "2",
     name: "Unit B",
   },
-   {
+  {
     id: "3",
     name: "Unit C",
   },
@@ -192,11 +187,11 @@ export default {
     handleSearch() {
       console.log("Search");
     },
-     
+
     onChange(e) {
       alert(`checked = ${e.target.checked}`);
     },
-  
+
     handleOpenSearchForm() {
       this.isOpenSearchForm = !this.isOpenSearchForm;
     },

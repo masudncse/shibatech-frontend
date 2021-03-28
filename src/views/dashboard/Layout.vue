@@ -1,28 +1,28 @@
 <template>
   <div class="dashboard">
     <a-layout id="components-layout-demo-top-side-2">
-    <Header/>
+      <TheHeader />
       <a-layout>
-        <Sidebar/>
-       
+        <TheSidebar />
+
         <a-layout style="padding: 0 24px 24px">
           <router-view></router-view>
-        <Footer/>
+          <TheFooter />
         </a-layout>
       </a-layout>
     </a-layout>
-   
   </div>
 </template>
 <script>
-import Header from '../include/Header'
-import Sidebar from '../include/Sidebar'
-import Footer from '../include/Footer'
+import TheHeader from "../../components/TheHeader";
+import TheSidebar from "../../components/TheSidebar";
+import TheFooter from "../../components/TheFooter";
+
 export default {
-  components:{
-    Header,
-    Sidebar,
-    Footer
+  components: {
+    TheHeader,
+    TheSidebar,
+    TheFooter,
   },
   data() {
     return {

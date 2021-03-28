@@ -1,13 +1,11 @@
 <template>
-  <div class="catagorey-list">
+  <div class="vendor-list">
     <a-row>
       <a-col :span="12">
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/city/all"
-              >City all</router-link
-            ></a-breadcrumb-item
+            ><router-link to="/vendors">Vendors</router-link></a-breadcrumb-item
           >
           <a-breadcrumb-item>All</a-breadcrumb-item>
         </a-breadcrumb>
@@ -17,8 +15,8 @@
           type="primary"
           icon="plus"
           class="mt-2"
-          @click="$router.push('/city/add')"
-          >Add City</a-button
+          @click="$router.push('/vendors/add')"
+          >Add Vendor</a-button
         >
         <a-button class="mt-2 ml-2" @click="handleOpenSearchForm"
           >Search <a-icon :type="isOpenSearchForm ? 'up' : 'down'"
@@ -37,9 +35,14 @@
     >
       <a-form layout="inline" @submit.prevent="handleSearch">
         <a-form-item>
-          <a-input placeholder="City Name"> </a-input>
+          <a-input placeholder="Vendor Name"> </a-input>
         </a-form-item>
-
+        <a-form-item>
+          <a-input placeholder="Primary Phone"> </a-input>
+        </a-form-item>
+        <a-form-item>
+          <a-input placeholder="Primary Email"> </a-input>
+        </a-form-item>
         <a-form-item>
           <a-button type="primary" html-type="submit">
             <a-icon type="search" /> Submit
@@ -91,14 +94,8 @@
         }"
       >
         <span slot="name" slot-scope="text">{{ text }}</span>
-        <a slot="State name" slot-scope="text">{{ text }}</a>
-
-        <a slot="Country name" slot-scope="text">{{ text }}</a>
-
-        <div slot="Active Status" slot-scope="">
-          <a-checkbox> </a-checkbox>
-        </div>
-
+        <a slot="phone" slot-scope="text">{{ text }}</a>
+        <a slot="email" slot-scope="text">{{ text }}</a>
         <div slot="action" slot-scope="text, record">
           <a-button-group>
             <a-popconfirm
@@ -109,12 +106,12 @@
             </a-popconfirm>
             <a-button
               type="default"
-              @click="$router.push(`/city/${record.id}/edit`)"
+              @click="$router.push(`/vendors/${record.id}/edit`)"
               icon="edit"
             />
             <a-button
               type="default"
-              @click="$router.push(`/city/${record.id}/details`)"
+              @click="$router.push(`/vendors/${record.id}/details`)"
               icon="info"
             />
           </a-button-group>
@@ -129,38 +126,31 @@ import reqwest from "reqwest";
 
 const columns = [
   {
-    title: "City Name ",
+    title: "Vendor Name ",
     dataIndex: "name",
     key: "name",
     sorter: true,
     width: "20%",
-    scopedSlots: { customRender: "City name" },
+    scopedSlots: { customRender: "name" },
   },
   {
-    title: "Active Status",
-    dataIndex: "",
-    key: "x",
-    width: "10%",
-    scopedSlots: { customRender: "Active Status" },
-  },
-  {
-    title: "State name",
-    dataIndex: "State",
-    key: "state",
-    width: "10%",
-    scopedSlots: { customRender: "State name" },
-  },
-  {
-    title: "Country name ",
-    dataIndex: "Country",
-    key: "country",
+    title: "Primary Phone ",
+    dataIndex: "phone",
+    key: "phone",
     sorter: true,
-    scopedSlots: { customRender: "Country Name" },
+    scopedSlots: { customRender: "phone" },
+  },
+  {
+    title: " Primary Email  ",
+    dataIndex: "email",
+    key: "email",
+    sorter: true,
+    scopedSlots: { customRender: "email" },
   },
   {
     title: "Action",
     dataIndex: "",
-    key: "xt",
+    key: "x",
     width: "10%",
     scopedSlots: { customRender: "action" },
   },
@@ -169,21 +159,21 @@ const columns = [
 const data = [
   {
     id: "1",
-    name: "Dhaka",
-    Country: "France",
-    State: "Mosko",
+    name: "John Brown",
+    phone: "01676717945",
+    email: "example@gmail.com",
   },
   {
     id: "2",
-    name: "Rajsahi",
-    Country: "Japan",
-    State: "Towkio",
+    name: "Jim Green",
+    phone: "01676717945",
+    email: "example@gmail.com",
   },
   {
     id: "3",
-    name: "Sylhet",
-    Country: "Chaina",
-    State: "Byjing",
+    name: "Joe Black",
+    phone: "01676717945",
+    email: "example@gmail.com",
   },
 ];
 

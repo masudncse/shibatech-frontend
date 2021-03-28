@@ -5,7 +5,9 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/state/all">State all</router-link></a-breadcrumb-item
+            ><router-link to="/state/all"
+              >State all</router-link
+            ></a-breadcrumb-item
           >
           <a-breadcrumb-item>All</a-breadcrumb-item>
         </a-breadcrumb>
@@ -37,7 +39,7 @@
         <a-form-item>
           <a-input placeholder="State Name"> </a-input>
         </a-form-item>
-        
+
         <a-form-item>
           <a-button type="primary" html-type="submit">
             <a-icon type="search" /> Submit
@@ -90,13 +92,11 @@
       >
         <span slot="name" slot-scope="text">{{ text }}</span>
         <a slot="" slot-scope="text">{{ text }}</a>
-        
+
         <div slot="Active Status" slot-scope="">
-             <a-checkbox @change="onChange">
-   
-  </a-checkbox>
+          <a-checkbox> </a-checkbox>
         </div>
-        
+
         <div slot="action" slot-scope="text, record">
           <a-button-group>
             <a-popconfirm
@@ -148,11 +148,10 @@ const columns = [
     sorter: true,
     scopedSlots: { customRender: "Country Name" },
   },
-
   {
     title: "Action",
     dataIndex: "",
-    key: "x",
+    key: "xt",
     width: "10%",
     scopedSlots: { customRender: "action" },
   },
@@ -162,20 +161,17 @@ const data = [
   {
     id: "1",
     name: "mosko",
-    Country:"France",
-  
+    Country: "France",
   },
   {
     id: "2",
     name: "Tokewoo",
     Country: "Japan",
-   
   },
   {
     id: "3",
     name: "Byjing",
     Country: "Chaina",
- 
   },
 ];
 

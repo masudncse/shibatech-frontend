@@ -15,7 +15,7 @@
       :form="form"
       :label-col="{ span: 6 }"
       :wrapper-col="{ span: 12 }"
-      @submit="handleSubmit"
+      @submit.prevent="handleSubmit"
     >
       <a-layout-content
         :style="{
@@ -28,8 +28,7 @@
           <a-row :gutter="15">
             <a-col :span="12">
               <a-form-item label="Product Name" labelAlign="left" class="mb-1">
-                <a-input 
-              
+                <a-input
                   v-decorator="[
                     'Product name',
                     {
@@ -38,115 +37,113 @@
                       ],
                     },
                   ]"
-               />
-               
+                />
               </a-form-item>
             </a-col>
             <a-col :span="12">
               <a-form-item label="Active status" labelAlign="left" class="mb-1">
-                <a-checkbox @change="onChange">
-    
-  </a-checkbox>
-              </a-form-item>
-             
-            </a-col>
-           
-                  <a-col :span="12">
-                      <a-form-item label="Catagorey" labelAlign="left" class="ml-4">
-  <a-select
-    show-search
-    :value="value"
-    placeholder="Search your Catagorey"
-    style="width: 200px"
-    :default-active-first-option="false"
-    :show-arrow="false"
-    :filter-option="false"
-    :not-found-content="null"
-    @search="handleSearch"
-    @change="handleChange"
-  >
-    <a-select-option v-for="d in data" :key="d.value">
-      {{ d.text }}
-    </a-select-option>
-  </a-select>
-             </a-form-item>
-            </a-col>
-                          <a-col :span="12">
-                      <a-form-item label="Minufecture" labelAlign="left" class="ml-4">
-  <a-select
-    show-search
-    :value="value"
-    placeholder="Search your Minufecture"
-    style="width: 200px"
-    :default-active-first-option="false"
-    :show-arrow="false"
-    :filter-option="false"
-    :not-found-content="null"
-    @search="handleSearch"
-    @change="handleChange"
-  >
-    <a-select-option v-for="d in data" :key="d.value">
-      {{ d.text }}
-    </a-select-option>
-  </a-select>
-             </a-form-item>
-            </a-col>
-                
-         <a-col :span="12">
-                      <a-form-item label="Vendor" labelAlign="left" class="ml-4">
-  <a-select
-    show-search
-    :value="value"
-    placeholder="Search your Vendor"
-    style="width: 200px"
-    :default-active-first-option="false"
-    :show-arrow="false"
-    :filter-option="false"
-    :not-found-content="null"
-    @search="handleSearch"
-    @change="handleChange"
-  >
-    <a-select-option v-for="d in data" :key="d.value">
-      {{ d.text }}
-    </a-select-option>
-  </a-select>
-             </a-form-item>
-            </a-col>
-
-
-                   <a-col :span="12">
-                      <a-form-item label="Unit" labelAlign="left" class="ml-4">
-  <a-select
-    show-search
-    :value="value"
-    placeholder="Search your Unit"
-    style="width: 200px"
-    :default-active-first-option="false"
-    :show-arrow="false"
-    :filter-option="false"
-    :not-found-content="null"
-    @search="handleSearch"
-    @change="handleChange"
-  >
-    <a-select-option v-for="d in data" :key="d.value">
-      {{ d.text }}
-    </a-select-option>
-  </a-select>
-             </a-form-item>
-            </a-col>
-                 <a-col :span="12">
-              <a-form-item label="Product Qty In Stock" labelAlign="left" class="mb-1">
-                <a-input default-value="300"
-              
-                  
-               />
-               
+                <a-checkbox> </a-checkbox>
               </a-form-item>
             </a-col>
-               <a-col :span="12">
-              <a-form-item label=" Recoder lavael" labelAlign="left" class="mb-1">
-                <a-input 
-              
+
+            <a-col :span="12">
+              <a-form-item label="Catagorey" labelAlign="left" class="ml-4">
+                <a-select
+                  show-search
+                  :value="value"
+                  placeholder="Search your Catagorey"
+                  style="width: 200px"
+                  :default-active-first-option="false"
+                  :show-arrow="false"
+                  :filter-option="false"
+                  :not-found-content="null"
+                  @search="handleSearch"
+                  @change="handleChange"
+                >
+                  <a-select-option v-for="d in data" :key="d.value">
+                    {{ d.text }}
+                  </a-select-option>
+                </a-select>
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Minufecture" labelAlign="left" class="ml-4">
+                <a-select
+                  show-search
+                  :value="value"
+                  placeholder="Search your Minufecture"
+                  style="width: 200px"
+                  :default-active-first-option="false"
+                  :show-arrow="false"
+                  :filter-option="false"
+                  :not-found-content="null"
+                  @search="handleSearch"
+                  @change="handleChange"
+                >
+                  <a-select-option v-for="d in data" :key="d.value">
+                    {{ d.text }}
+                  </a-select-option>
+                </a-select>
+              </a-form-item>
+            </a-col>
+
+            <a-col :span="12">
+              <a-form-item label="Vendor" labelAlign="left" class="ml-4">
+                <a-select
+                  show-search
+                  :value="value"
+                  placeholder="Search your Vendor"
+                  style="width: 200px"
+                  :default-active-first-option="false"
+                  :show-arrow="false"
+                  :filter-option="false"
+                  :not-found-content="null"
+                  @search="handleSearch"
+                  @change="handleChange"
+                >
+                  <a-select-option v-for="d in data" :key="d.value">
+                    {{ d.text }}
+                  </a-select-option>
+                </a-select>
+              </a-form-item>
+            </a-col>
+
+            <a-col :span="12">
+              <a-form-item label="Unit" labelAlign="left" class="ml-4">
+                <a-select
+                  show-search
+                  :value="value"
+                  placeholder="Search your Unit"
+                  style="width: 200px"
+                  :default-active-first-option="false"
+                  :show-arrow="false"
+                  :filter-option="false"
+                  :not-found-content="null"
+                  @search="handleSearch"
+                  @change="handleChange"
+                >
+                  <a-select-option v-for="d in data" :key="d.value">
+                    {{ d.text }}
+                  </a-select-option>
+                </a-select>
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item
+                label="Product Qty In Stock"
+                labelAlign="left"
+                class="mb-1"
+              >
+                <a-input default-value="300" />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item
+                label=" Recoder lavael"
+                labelAlign="left"
+                class="mb-1"
+              >
+                <a-input
                   v-decorator="[
                     'Product Recoder',
                     {
@@ -155,16 +152,14 @@
                       ],
                     },
                   ]"
-               />
-               
+                />
               </a-form-item>
             </a-col>
           </a-row>
         </a-card>
         <br />
-      
+
         <br />
-      
       </a-layout-content>
       <a-layout-content
         :style="{
@@ -189,8 +184,8 @@
 </template>
 
 <script>
-import jsonp from 'fetch-jsonp';
-import querystring from 'querystring';
+import jsonp from "fetch-jsonp";
+import querystring from "querystring";
 
 let timeout;
 let currentValue;
@@ -204,16 +199,16 @@ function fetch(value, callback) {
 
   function fake() {
     const str = querystring.encode({
-      code: 'utf-8',
+      code: "utf-8",
       q: value,
     });
     jsonp(`https://suggest.taobao.com/sug?${str}`)
-      .then(response => response.json())
-      .then(d => {
+      .then((response) => response.json())
+      .then((d) => {
         if (currentValue === value) {
           const result = d.result;
           const data = [];
-          result.forEach(r => {
+          result.forEach((r) => {
             data.push({
               value: r[0],
               text: r[0],
@@ -247,40 +242,35 @@ export default {
           breadcrumbName: "Creating",
         },
       ],
-    
     };
   },
   methods: {
-
-
-       handleSearch(value) {
-      fetch(value, data => (this.data = data));
+    handleSearch(value) {
+      fetch(value, (data) => (this.data = data));
     },
     handleChange(value) {
       console.log(value);
       this.value = value;
-      fetch(value, data => (this.data = data));
+      fetch(value, (data) => (this.data = data));
     },
   },
-     onChange(e) {
-      alert(`checked = ${e.target.checked}`);
-    },
-  
-    handleSubmit(e) {
-      e.preventDefault();
-      this.form.validateFields((err, values) => {
-        if (!err) {
-          console.log("Received values of form: ", values);
-        }
-      });
-    },
-    handleSelectChange(value) {
-      console.log(value);
-      this.form.setFieldsValue({
-        note: `Hi, ${value === "male" ? "man" : "lady"}!`,
-      });
-    },
-    
-  }
+  onChange(e) {
+    alert(`checked = ${e.target.checked}`);
+  },
 
+  handleSubmit(e) {
+    e.preventDefault();
+    this.form.validateFields((err, values) => {
+      if (!err) {
+        console.log("Received values of form: ", values);
+      }
+    });
+  },
+  handleSelectChange(value) {
+    console.log(value);
+    this.form.setFieldsValue({
+      note: `Hi, ${value === "male" ? "man" : "lady"}!`,
+    });
+  },
+};
 </script>
