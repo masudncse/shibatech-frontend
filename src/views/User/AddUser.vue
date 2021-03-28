@@ -1,13 +1,17 @@
 <template>
-  <div class="add-vendor">
+  <div class="add-user">
     <a-row>
       <a-col :span="24">
-        <a-page-header
-          class="page--title"
-          title="Creating New Vendor"
-          :breadcrumb="{ props: { routes } }"
-          sub-title=""
-        />
+        <div class="page--title">
+          <a-breadcrumb>
+            <a-breadcrumb-item>Home</a-breadcrumb-item>
+            <a-breadcrumb-item
+              ><router-link to="/users">Users</router-link></a-breadcrumb-item
+            >
+            <a-breadcrumb-item>Adding new</a-breadcrumb-item>
+          </a-breadcrumb>
+          <a-page-header title="Creating New User" sub-title="" />
+        </div>
       </a-col>
     </a-row>
 
@@ -24,16 +28,19 @@
           margin: 0,
         }"
       >
-        <a-card title="Basic Information">
+        <a-card title="User Login & Role">
           <a-row :gutter="15">
             <a-col :span="12">
-              <a-form-item label="Vendor Name" labelAlign="left" class="mb-1">
+              <a-form-item label="User Name" labelAlign="left" class="mb-0">
                 <a-input
                   v-decorator="[
-                    'vendor_name',
+                    'user_name',
                     {
                       rules: [
-                        { required: true, message: 'Please input your note!' },
+                        {
+                          required: true,
+                          message: 'Please input your username!',
+                        },
                       ],
                     },
                   ]"
@@ -41,57 +48,239 @@
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="Primary Email" labelAlign="left" class="mb-1">
-                <a-input />
+              <a-form-item label="Primary Email" labelAlign="left" class="mb-0">
+                <a-input
+                  v-decorator="[
+                    'primary_email',
+                    {
+                      rules: [
+                        { required: true, message: 'Please input your email!' },
+                      ],
+                    },
+                  ]"
+                />
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="Primary Phone" labelAlign="left" class="mb-0">
-                <a-input />
+              <a-form-item label="First Name" labelAlign="left" class="mb-0">
+                <a-input
+                  v-decorator="[
+                    'first_name',
+                    {
+                      rules: [
+                        {
+                          required: true,
+                          message: 'Please input your first name!',
+                        },
+                      ],
+                    },
+                  ]"
+                />
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="Website" labelAlign="left" class="mb-0">
-                <a-input />
+              <a-form-item label="Last Name" labelAlign="left" class="mb-0">
+                <a-input
+                  v-decorator="[
+                    'last_name',
+                    {
+                      rules: [
+                        {
+                          required: true,
+                          message: 'Please input your last_name!',
+                        },
+                      ],
+                    },
+                  ]"
+                />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Password" labelAlign="left" class="mb-0">
+                <a-input
+                  v-decorator="[
+                    'password',
+                    {
+                      rules: [
+                        {
+                          required: true,
+                          message: 'Please input your password!',
+                        },
+                      ],
+                    },
+                  ]"
+                />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item
+                label="Confirm Password"
+                labelAlign="left"
+                class="mb-1"
+              >
+                <a-input
+                  v-decorator="[
+                    'confirm_password',
+                    {
+                      rules: [
+                        {
+                          required: true,
+                          message: 'Please input your confirm password!',
+                        },
+                      ],
+                    },
+                  ]"
+                />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Role" labelAlign="left" class="mb-0">
+                <a-select
+                  v-decorator="[
+                    'role',
+                    {
+                      rules: [
+                        { required: true, message: 'Please select your role!' },
+                      ],
+                    },
+                  ]"
+                  default-value="lucy"
+                  style="width: 120px"
+                >
+                  <a-select-option value="jack"> Admin </a-select-option>
+                  <a-select-option value="Yiminghe"> Manager </a-select-option>
+                  <a-select-option value="lucy"> Editor </a-select-option>
+                </a-select>
               </a-form-item>
             </a-col>
           </a-row>
         </a-card>
         <br />
-        <a-card title="Address Details">
+        <a-card title="More Information">
+          <a-row :gutter="15">
+            <a-col :span="12">
+              <a-form-item label="Title " labelAlign="left" class="mb-0">
+                <a-input />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Fax " labelAlign="left" class="mb-1">
+                <a-input />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Department " labelAlign="left" class="mb-0">
+                <a-input />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Other Email " labelAlign="left" class="mb-0">
+                <a-input />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Office Phone 	" labelAlign="left" class="mb-0">
+                <a-input />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item
+                label="Secondary Email 	"
+                labelAlign="left"
+                class="mb-1"
+              >
+                <a-input />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Mobile Phone 	" labelAlign="left" class="mb-0">
+                <a-input />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Home Phone 	" labelAlign="left" class="mb-0">
+                <a-input />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item
+                label="Secondary Phone 	"
+                labelAlign="left"
+                class="mb-0"
+              >
+                <a-input />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Signature " labelAlign="left" class="mb-0">
+                <a-upload
+                  name="file"
+                  :multiple="true"
+                  action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                  :headers="headers"
+                >
+                  <a-button>
+                    <a-icon type="upload" /> Click to Upload
+                  </a-button>
+                </a-upload>
+              </a-form-item>
+            </a-col>
+          </a-row>
+        </a-card>
+        <br />
+        <a-card title="Address Information">
           <a-row :gutter="15">
             <a-col :span="24">
               <a-row :gutter="15">
                 <a-col :span="12">
-                  <a-form-item label="Street" labelAlign="left" class="mb-1">
+                  <a-form-item label="Street" labelAlign="left" class="mb-0">
                     <a-textarea :auto-size="{ minRows: 3, maxRows: 6 }" />
                   </a-form-item>
                 </a-col>
                 <a-col :span="12">
-                  <a-form-item label="PO Box" labelAlign="left" class="mb-1">
+                  <a-form-item label="PO Box" labelAlign="left" class="mb-0">
                     <a-input />
                   </a-form-item>
                 </a-col>
               </a-row>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="City" labelAlign="left" class="mb-1">
+              <a-form-item label="City" labelAlign="left" class="mb-0">
                 <a-input />
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="State" labelAlign="left" class="mb-1">
+              <a-form-item label="State" labelAlign="left" class="mb-0">
                 <a-input />
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="Postal Code" labelAlign="left" class="mb-1">
+              <a-form-item label="Postal Code" labelAlign="left" class="mb-0">
                 <a-input />
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="Country" labelAlign="left" class="mb-1">
+              <a-form-item label="Country" labelAlign="left" class="mb-0">
                 <a-input />
+              </a-form-item>
+            </a-col>
+          </a-row>
+        </a-card>
+        <br />
+        <a-card title="User Photograph">
+          <a-row :gutter="15">
+            <a-col :span="12">
+              <a-form-item label="User Image" labelAlign="left" class="mb-0">
+                <a-upload
+                  name="file"
+                  :multiple="true"
+                  action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+                  :headers="headers"
+                >
+                  <a-button>
+                    <a-icon type="upload" /> Click to Upload
+                  </a-button>
+                </a-upload>
               </a-form-item>
             </a-col>
           </a-row>
@@ -135,20 +324,6 @@ export default {
     return {
       formLayout: "horizontal",
       form: this.$form.createForm(this, { name: "coordinated" }),
-      routes: [
-        {
-          path: "index",
-          breadcrumbName: "Home",
-        },
-        {
-          path: "first",
-          breadcrumbName: "Vendors",
-        },
-        {
-          path: "second",
-          breadcrumbName: "Adding new",
-        },
-      ],
     };
   },
   methods: {

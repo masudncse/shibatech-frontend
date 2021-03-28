@@ -1,11 +1,11 @@
 <template>
-  <div class="vendor-list">
+  <div class="user-list">
     <a-row>
       <a-col :span="12">
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/vendors">Vendors</router-link></a-breadcrumb-item
+            ><router-link to="/users">Users</router-link></a-breadcrumb-item
           >
           <a-breadcrumb-item>All</a-breadcrumb-item>
         </a-breadcrumb>
@@ -15,8 +15,8 @@
           type="primary"
           icon="plus"
           class="mt-2"
-          @click="$router.push('/vendors/add')"
-          >Add Vendor</a-button
+          @click="$router.push('/users/add')"
+          >Add User</a-button
         >
         <a-button class="mt-2 ml-2" @click="handleOpenSearchForm"
           >Search <a-icon :type="isOpenSearchForm ? 'up' : 'down'"
@@ -35,7 +35,7 @@
     >
       <a-form layout="inline" @submit.prevent="handleSearch">
         <a-form-item>
-          <a-input placeholder="Vendor Name"> </a-input>
+          <a-input placeholder="User Name"> </a-input>
         </a-form-item>
         <a-form-item>
           <a-input placeholder="Primary Phone"> </a-input>
@@ -106,12 +106,12 @@
             </a-popconfirm>
             <a-button
               type="default"
-              @click="$router.push(`/vendors/${record.id}/edit`)"
+              @click="$router.push(`/users/${record.id}/edit`)"
               icon="edit"
             />
             <a-button
               type="default"
-              @click="$router.push(`/vendors/${record.id}/details`)"
+              @click="$router.push(`/users/${record.id}/details`)"
               icon="info"
             />
           </a-button-group>
@@ -126,7 +126,7 @@ import reqwest from "reqwest";
 
 const columns = [
   {
-    title: "Vendor Name ",
+    title: "User Name ",
     dataIndex: "name",
     key: "name",
     sorter: true,

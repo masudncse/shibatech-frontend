@@ -1,11 +1,11 @@
 <template>
-  <div class="vendor-details">
+  <div class="user-details">
     <a-row>
       <a-col :span="24">
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/vendors">Vendors</router-link></a-breadcrumb-item
+            ><router-link to="/users">Users</router-link></a-breadcrumb-item
           >
           <a-breadcrumb-item>Md. Masudul Kabir</a-breadcrumb-item>
         </a-breadcrumb>
@@ -49,15 +49,15 @@
           <a-button
             type="primary"
             icon="plus"
-            @click="$router.push('/vendors/add')"
-            >Add Vendor</a-button
+            @click="$router.push('/users/add')"
+            >Add User</a-button
           >
           <div class="mb-2"></div>
-          <a-button @click="$router.push('/vendors/1/edit')">Edit</a-button>
+          <a-button @click="$router.push('/users/1/edit')">Edit</a-button>
           <a-button class="ml-2">Send Email</a-button>
           <a-dropdown>
             <a-menu slot="overlay">
-              <a-menu-item key="1"> Delete Vendor </a-menu-item>
+              <a-menu-item key="1"> Delete User </a-menu-item>
               <a-menu-item key="2"> Duplicate </a-menu-item>
               <a-menu-item key="3"> Create Purchase Order </a-menu-item>
             </a-menu>
@@ -125,12 +125,12 @@
         <a-card title="Basic Information">
           <a-row :gutter="15">
             <a-col :span="12">
-              <a-form-item label="Vendor Name" labelAlign="left" class="mb-1">
+              <a-form-item label="User Name" labelAlign="left" class="mb-1">
                 Md. Masudul Kabir
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="Vendor Number" labelAlign="left" class="mb-1">
+              <a-form-item label="User Number" labelAlign="left" class="mb-1">
                 V01
               </a-form-item>
             </a-col>
@@ -239,20 +239,6 @@ export default {
       id: this.$route.params.id,
       formLayout: "horizontal",
       form: this.$form.createForm(this, { name: "coordinated" }),
-      routes: [
-        {
-          path: "index",
-          breadcrumbName: "Home",
-        },
-        {
-          path: "first",
-          breadcrumbName: "Vendors",
-        },
-        {
-          path: "second",
-          breadcrumbName: "Md. Masudul Kabir",
-        },
-      ],
     };
   },
   methods: {},
