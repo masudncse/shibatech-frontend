@@ -5,11 +5,11 @@ export default [
   },
   {
     path: "/states/add",
-    component: () => import("../views/State/StateAdd.vue"),
+    component: () => import("../views/State/AddState.vue"),
   },
   {
     path: "/states/:id/edit",
-    component: () => import("../views/State/StateEdit.vue"),
+    component: () => import("../views/State/EditState.vue"),
   },
   {
     path: "/states/:id/details",

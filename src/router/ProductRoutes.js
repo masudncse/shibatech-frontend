@@ -5,11 +5,11 @@ export default [
   },
   {
     path: "/products/add",
-    component: () => import("../views/Product/ProductAdd.vue"),
+    component: () => import("../views/Product/AddProduct.vue"),
   },
   {
     path: "/products/:id/edit",
-    component: () => import("../views/Product/ProductEdit.vue"),
+    component: () => import("../views/Product/EditProduct.vue"),
   },
   {
     path: "/products/:id/details",

@@ -42,18 +42,13 @@
             </a-col>
             <a-col :span="12">
               <a-form-item label="Active status" labelAlign="left" class="mb-1">
-                <a-checkbox @change="onChange">
-    
-  </a-checkbox>
+                <a-checkbox @change="onChange"> </a-checkbox>
               </a-form-item>
             </a-col>
-           
-           
-            
           </a-row>
         </a-card>
         <br />
-      
+
         <br />
         <a-card title="Description Details">
           <a-row :gutter="15">
@@ -100,7 +95,7 @@ export default {
         },
         {
           path: "first",
-          breadcrumbName: "Unit",
+          breadcrumbName: "Units",
         },
         {
           path: "second",
@@ -110,7 +105,7 @@ export default {
     };
   },
   methods: {
-     onChange(e) {
+    onChange(e) {
       alert(`checked = ${e.target.checked}`);
     },
     handleSubmit(e) {

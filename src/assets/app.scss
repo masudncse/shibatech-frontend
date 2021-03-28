@@ -21,7 +21,7 @@ html {
   }
 }
 
-.anticon{
+.anticon {
   vertical-align: 0px;
 }
 
@@ -31,6 +31,10 @@ html {
 
 .page--title {
   padding: 16px 0 16px 0 !important;
+
+  .ant-page-header {
+    padding: 8px 0 0 0;
+  }
 }
 
 .info-block {

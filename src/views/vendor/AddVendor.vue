@@ -2,12 +2,18 @@
   <div class="add-vendor">
     <a-row>
       <a-col :span="24">
-        <a-page-header
-          class="page--title"
-          title="Creating New Vendor"
-          :breadcrumb="{ props: { routes } }"
-          sub-title=""
-        />
+        <div class="page--title">
+          <a-breadcrumb>
+            <a-breadcrumb-item>Home</a-breadcrumb-item>
+            <a-breadcrumb-item
+              ><router-link to="/vendors"
+                >Vendors</router-link
+              ></a-breadcrumb-item
+            >
+            <a-breadcrumb-item>Adding new</a-breadcrumb-item>
+          </a-breadcrumb>
+          <a-page-header title="Creating New Vendor" sub-title="" />
+        </div>
       </a-col>
     </a-row>
 
@@ -135,20 +141,6 @@ export default {
     return {
       formLayout: "horizontal",
       form: this.$form.createForm(this, { name: "coordinated" }),
-      routes: [
-        {
-          path: "index",
-          breadcrumbName: "Home",
-        },
-        {
-          path: "first",
-          breadcrumbName: "Vendors",
-        },
-        {
-          path: "second",
-          breadcrumbName: "Adding new",
-        },
-      ],
     };
   },
   methods: {

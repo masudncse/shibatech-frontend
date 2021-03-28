@@ -5,7 +5,7 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/unit/all">Units</router-link></a-breadcrumb-item
+            ><router-link to="/units">Units</router-link></a-breadcrumb-item
           >
           <a-breadcrumb-item>All</a-breadcrumb-item>
         </a-breadcrumb>
@@ -15,7 +15,7 @@
           type="primary"
           icon="plus"
           class="mt-2"
-          @click="$router.push('/unit/add')"
+          @click="$router.push('/units/add')"
           >Add Unit</a-button
         >
         <a-button class="mt-2 ml-2" @click="handleOpenSearchForm"
@@ -104,12 +104,12 @@
             </a-popconfirm>
             <a-button
               type="default"
-              @click="$router.push(`/unit/${record.id}/edit`)"
+              @click="$router.push(`/units/${record.id}/edit`)"
               icon="edit"
             />
             <a-button
               type="default"
-              @click="$router.push(`/unit/${record.id}/details`)"
+              @click="$router.push(`/units/${record.id}/details`)"
               icon="info"
             />
           </a-button-group>

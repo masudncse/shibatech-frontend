@@ -5,7 +5,7 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/city/all"
+            ><router-link to="/cities"
               >City all</router-link
             ></a-breadcrumb-item
           >
@@ -17,7 +17,7 @@
           type="primary"
           icon="plus"
           class="mt-2"
-          @click="$router.push('/city/add')"
+          @click="$router.push('/cities/add')"
           >Add City</a-button
         >
         <a-button class="mt-2 ml-2" @click="handleOpenSearchForm"
@@ -109,12 +109,12 @@
             </a-popconfirm>
             <a-button
               type="default"
-              @click="$router.push(`/city/${record.id}/edit`)"
+              @click="$router.push(`/cities/${record.id}/edit`)"
               icon="edit"
             />
             <a-button
               type="default"
-              @click="$router.push(`/city/${record.id}/details`)"
+              @click="$router.push(`/cities/${record.id}/details`)"
               icon="info"
             />
           </a-button-group>

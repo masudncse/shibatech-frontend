@@ -9,7 +9,7 @@ export default [
   },
   {
     path: "/units/:id/edit",
-    component: () => import("../views/Unit/UnitEdit.vue"),
+    component: () => import("../views/Unit/EditUnit.vue"),
   },
   {
     path: "/units/:id/details",

@@ -31,7 +31,7 @@
         </a-menu-item>
       </a-sub-menu>
       <a-sub-menu key="categories">
-        <span slot="title"><a-icon type="deployment-unit" />Catagorey</span>
+        <span slot="title"><a-icon type="deployment-unit" />Catagories</span>
         <a-menu-item key="5">
           <router-link to="/categories/add">Add New</router-link>
         </a-menu-item>
@@ -58,7 +58,7 @@
         </a-menu-item>
       </a-sub-menu>
       <a-sub-menu key="cities">
-        <span slot="title"><a-icon type="deployment-unit" />City</span>
+        <span slot="title"><a-icon type="deployment-unit" />Cities</span>
         <a-menu-item key="11">
           <router-link to="/cities/add">Add New</router-link>
         </a-menu-item>
@@ -67,7 +67,7 @@
         </a-menu-item>
       </a-sub-menu>
       <a-sub-menu key="products">
-        <span slot="title"><a-icon type="star" />Product</span>
+        <span slot="title"><a-icon type="star" />Products</span>
         <a-menu-item key="13">
           <router-link to="/products/add">Add New</router-link>
         </a-menu-item>

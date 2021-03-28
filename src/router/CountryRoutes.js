@@ -5,11 +5,11 @@ export default [
   },
   {
     path: "/countries/add",
-    component: () => import("../views/Country/CountryAdd.vue"),
+    component: () => import("../views/Country/AddCountry.vue"),
   },
   {
     path: "/countries/:id/edit",
-    component: () => import("../views/Country/CountryEdit.vue"),
+    component: () => import("../views/Country/EditCountry.vue"),
   },
   {
     path: "/countries/:id/details",

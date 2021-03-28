@@ -47,12 +47,12 @@
             </a-col>
 
             <a-col :span="12">
-              <a-form-item label="State" labelAlign="left" class="ml-4">
+              <a-form-item label="State" labelAlign="left" class="mb-0">
                 <a-select
                   show-search
                   :value="value"
                   placeholder="Search your State"
-                  style="width: 200px"
+                  style="width: 100%"
                   :default-active-first-option="false"
                   :show-arrow="false"
                   :filter-option="false"
@@ -67,12 +67,12 @@
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="Country" labelAlign="left" class="ml-4">
+              <a-form-item label="Country" labelAlign="left" class="mb-0">
                 <a-select
                   show-search
                   :value="value"
                   placeholder="Search your Country"
-                  style="width: 200px"
+                  style="width: 100%"
                   :default-active-first-option="false"
                   :show-arrow="false"
                   :filter-option="false"
@@ -165,8 +165,8 @@ export default {
           breadcrumbName: "Home",
         },
         {
-          path: "first",
-          breadcrumbName: "country",
+          path: "/countries",
+          breadcrumbName: "Countries",
         },
         {
           path: "second",

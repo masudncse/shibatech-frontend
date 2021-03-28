@@ -5,11 +5,11 @@ export default [
   },
   {
     path: "/categories/add",
-    component: () => import("../views/Category/CategoryAdd.vue"),
+    component: () => import("../views/Category/AddCategory.vue"),
   },
   {
     path: "/categories/:id/edit",
-    component: () => import("../views/Category/CategoryEdit.vue"),
+    component: () => import("../views/Category/EditCategory.vue"),
   },
   {
     path: "/categories/:id/details",
