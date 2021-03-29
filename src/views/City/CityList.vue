@@ -6,7 +6,7 @@
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
             ><router-link to="/cities"
-              >City all</router-link
+              >Cities</router-link
             ></a-breadcrumb-item
           >
           <a-breadcrumb-item>All</a-breadcrumb-item>

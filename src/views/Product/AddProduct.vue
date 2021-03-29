@@ -2,12 +2,18 @@
   <div class="add-state">
     <a-row>
       <a-col :span="24">
-        <a-page-header
-          class="page--title"
-          title="Creating New Product"
-          :breadcrumb="{ props: { routes } }"
-          sub-title=""
-        />
+        <div class="page--title">
+          <a-breadcrumb>
+            <a-breadcrumb-item>Home</a-breadcrumb-item>
+            <a-breadcrumb-item
+              ><router-link to="/products"
+                >Products</router-link
+              ></a-breadcrumb-item
+            >
+            <a-breadcrumb-item>Adding new</a-breadcrumb-item>
+          </a-breadcrumb>
+          <a-page-header title="Creating New Product" sub-title="" />
+        </div>
       </a-col>
     </a-row>
 
@@ -47,12 +53,12 @@
             </a-col>
 
             <a-col :span="12">
-              <a-form-item label="Catagorey" labelAlign="left" class="ml-4">
+              <a-form-item label="Category" labelAlign="left" class="mb-0">
                 <a-select
                   show-search
                   :value="value"
-                  placeholder="Search your Catagorey"
-                  style="width: 200px"
+                  placeholder="Search your Category"
+                  style="width: 100%"
                   :default-active-first-option="false"
                   :show-arrow="false"
                   :filter-option="false"
@@ -67,12 +73,12 @@
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="Minufecture" labelAlign="left" class="ml-4">
+              <a-form-item label="Minufecture" labelAlign="left" class="mb-0">
                 <a-select
                   show-search
                   :value="value"
                   placeholder="Search your Minufecture"
-                  style="width: 200px"
+                  style="width: 100%"
                   :default-active-first-option="false"
                   :show-arrow="false"
                   :filter-option="false"
@@ -88,12 +94,12 @@
             </a-col>
 
             <a-col :span="12">
-              <a-form-item label="Vendor" labelAlign="left" class="ml-4">
+              <a-form-item label="Vendor" labelAlign="left" class="mb-0">
                 <a-select
                   show-search
                   :value="value"
                   placeholder="Search your Vendor"
-                  style="width: 200px"
+                  style="width: 100%"
                   :default-active-first-option="false"
                   :show-arrow="false"
                   :filter-option="false"
@@ -109,12 +115,12 @@
             </a-col>
 
             <a-col :span="12">
-              <a-form-item label="Unit" labelAlign="left" class="ml-4">
+              <a-form-item label="Unit" labelAlign="left" class="mb-0">
                 <a-select
                   show-search
                   :value="value"
                   placeholder="Search your Unit"
-                  style="width: 200px"
+                  style="width: 100%"
                   :default-active-first-option="false"
                   :show-arrow="false"
                   :filter-option="false"
@@ -253,24 +259,23 @@ export default {
       this.value = value;
       fetch(value, (data) => (this.data = data));
     },
-  },
-  onChange(e) {
-    alert(`checked = ${e.target.checked}`);
-  },
-
-  handleSubmit(e) {
-    e.preventDefault();
-    this.form.validateFields((err, values) => {
-      if (!err) {
-        console.log("Received values of form: ", values);
-      }
-    });
-  },
-  handleSelectChange(value) {
-    console.log(value);
-    this.form.setFieldsValue({
-      note: `Hi, ${value === "male" ? "man" : "lady"}!`,
-    });
+    onChange(e) {
+      alert(`checked = ${e.target.checked}`);
+    },
+    handleSubmit(e) {
+      e.preventDefault();
+      this.form.validateFields((err, values) => {
+        if (!err) {
+          console.log("Received values of form: ", values);
+        }
+      });
+    },
+    handleSelectChange(value) {
+      console.log(value);
+      this.form.setFieldsValue({
+        note: `Hi, ${value === "male" ? "man" : "lady"}!`,
+      });
+    },
   },
 };
 </script>

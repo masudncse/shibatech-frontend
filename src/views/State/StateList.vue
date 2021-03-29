@@ -5,8 +5,8 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/state/all"
-              >State all</router-link
+            ><router-link to="/states"
+              >States</router-link
             ></a-breadcrumb-item
           >
           <a-breadcrumb-item>All</a-breadcrumb-item>
@@ -17,7 +17,7 @@
           type="primary"
           icon="plus"
           class="mt-2"
-          @click="$router.push('/State/add')"
+          @click="$router.push('/states/add')"
           >Add State</a-button
         >
         <a-button class="mt-2 ml-2" @click="handleOpenSearchForm"
@@ -107,12 +107,12 @@
             </a-popconfirm>
             <a-button
               type="default"
-              @click="$router.push(`/state/${record.id}/edit`)"
+              @click="$router.push(`/states/${record.id}/edit`)"
               icon="edit"
             />
             <a-button
               type="default"
-              @click="$router.push(`/state/${record.id}/details`)"
+              @click="$router.push(`/states/${record.id}/details`)"
               icon="info"
             />
           </a-button-group>

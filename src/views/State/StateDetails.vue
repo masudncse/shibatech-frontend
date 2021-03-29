@@ -5,7 +5,7 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/state/all">Statets</router-link></a-breadcrumb-item
+            ><router-link to="/states">States</router-link></a-breadcrumb-item
           >
           <a-breadcrumb-item>Mosko</a-breadcrumb-item>
         </a-breadcrumb>
@@ -43,11 +43,11 @@
           <a-button
             type="primary"
             icon="plus"
-            @click="$router.push('/state/add')"
-            >State Add</a-button
+            @click="$router.push('/states/add')"
+            >Add State</a-button
           >
           <div class="mb-2"></div>
-          <a-button @click="$router.push('/state/1/edit')">Edit</a-button>
+          <a-button @click="$router.push('/states/1/edit')">Edit</a-button>
           <a-button class="ml-2">Send Email</a-button>
           <a-dropdown>
             <a-menu slot="overlay">

@@ -1,16 +1,21 @@
 <template>
-  <div class="add-unit">
+  <div class="edit-permission">
     <a-row>
       <a-col :span="24">
         <div class="page--title">
           <a-breadcrumb>
             <a-breadcrumb-item>Home</a-breadcrumb-item>
             <a-breadcrumb-item
-              ><router-link to="/units">Units</router-link></a-breadcrumb-item
+              ><router-link to="/permissions"
+                >Permissions</router-link
+              ></a-breadcrumb-item
             >
-            <a-breadcrumb-item>Adding new</a-breadcrumb-item>
+            <a-breadcrumb-item>Editing : Create Vend...</a-breadcrumb-item>
           </a-breadcrumb>
-          <a-page-header title="Creating New Unit" sub-title="" />
+          <a-page-header
+            title="Editing Permission - Create Vendors"
+            sub-title=""
+          />
         </div>
       </a-col>
     </a-row>
@@ -31,10 +36,10 @@
         <a-card title="Basic Information">
           <a-row :gutter="15">
             <a-col :span="12">
-              <a-form-item label="Unit Name" labelAlign="left" class="mb-1">
+              <a-form-item label="Permission Name" labelAlign="left" class="mb-1">
                 <a-input
                   v-decorator="[
-                    'unit_name',
+                    'vole_name',
                     {
                       rules: [
                         { required: true, message: 'Please input your note!' },
@@ -46,19 +51,7 @@
             </a-col>
             <a-col :span="12">
               <a-form-item label="Active status" labelAlign="left" class="mb-1">
-                <a-checkbox @change="onChange"> </a-checkbox>
-              </a-form-item>
-            </a-col>
-          </a-row>
-        </a-card>
-        <br />
-
-        <br />
-        <a-card title="Description Details">
-          <a-row :gutter="15">
-            <a-col :span="12">
-              <a-form-item label="Description" labelAlign="left" class="mb-0">
-                <a-textarea :auto-size="{ minRows: 4, maxRows: 6 }" />
+                <a-checkbox> </a-checkbox>
               </a-form-item>
             </a-col>
           </a-row>
@@ -72,7 +65,7 @@
         }"
       >
         <a-form-item :wrapper-col="{ span: 24 }" class="text-right mb-0">
-          <a-button type="primary" html-type="submit"> Submit </a-button>
+          <a-button type="primary" html-type="submit"> Update </a-button>
           <a-button
             type="danger"
             html-type="reset"
@@ -90,28 +83,12 @@
 export default {
   data() {
     return {
+      id: this.$route.params.id,
       formLayout: "horizontal",
       form: this.$form.createForm(this, { name: "coordinated" }),
-      routes: [
-        {
-          path: "index",
-          breadcrumbName: "Home",
-        },
-        {
-          path: "first",
-          breadcrumbName: "Units",
-        },
-        {
-          path: "second",
-          breadcrumbName: "Adding new",
-        },
-      ],
     };
   },
   methods: {
-    onChange(e) {
-      alert(`checked = ${e.target.checked}`);
-    },
     handleSubmit(e) {
       e.preventDefault();
       this.form.validateFields((err, values) => {

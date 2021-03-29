@@ -12,6 +12,11 @@
         <span>Dashboard</span>
         <router-link to="/"></router-link>
       </a-menu-item>
+      <a-menu-item key="company-info">
+        <a-icon type="home" />
+        <span>Company Info</span>
+        <router-link to="/company-info"></router-link>
+      </a-menu-item>
       <a-sub-menu key="vendors">
         <span slot="title"><a-icon type="user" />Vendors</span>
         <a-menu-item key="1">
@@ -82,6 +87,42 @@
         </a-menu-item>
         <a-menu-item key="14">
           <router-link to="/users">All Users</router-link>
+        </a-menu-item>
+      </a-sub-menu>
+      <a-sub-menu key="roles">
+        <span slot="title"><a-icon type="star" />Roles</span>
+        <a-menu-item key="13">
+          <router-link to="/roles/add">Add New</router-link>
+        </a-menu-item>
+        <a-menu-item key="14">
+          <router-link to="/roles">All Roles</router-link>
+        </a-menu-item>
+      </a-sub-menu>
+      <a-sub-menu key="permissions">
+        <span slot="title"><a-icon type="star" />Permissions</span>
+        <a-menu-item key="13">
+          <router-link to="/permissions/add">Add New</router-link>
+        </a-menu-item>
+        <a-menu-item key="14">
+          <router-link to="/permissions">All Permissions</router-link>
+        </a-menu-item>
+      </a-sub-menu>
+      <a-sub-menu key="organizations">
+        <span slot="title"><a-icon type="star" />Organizations</span>
+        <a-menu-item key="13">
+          <router-link to="/organizations/add">Add New</router-link>
+        </a-menu-item>
+        <a-menu-item key="14">
+          <router-link to="/organizations">All Organizations</router-link>
+        </a-menu-item>
+      </a-sub-menu>
+      <a-sub-menu key="contacts">
+        <span slot="title"><a-icon type="star" />Contacts</span>
+        <a-menu-item key="13">
+          <router-link to="/contacts/add">Add New</router-link>
+        </a-menu-item>
+        <a-menu-item key="14">
+          <router-link to="/contacts">All Contacts</router-link>
         </a-menu-item>
       </a-sub-menu>
     </a-menu>

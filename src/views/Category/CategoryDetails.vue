@@ -5,7 +5,7 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/catagorey/all">Catagorey</router-link></a-breadcrumb-item
+            ><router-link to="/categories">Categories</router-link></a-breadcrumb-item
           >
           <a-breadcrumb-item>Electronic</a-breadcrumb-item>
         </a-breadcrumb>
@@ -43,11 +43,11 @@
           <a-button
             type="primary"
             icon="plus"
-            @click="$router.push('/catagorey/add')"
-            >Catagorey Add</a-button
+            @click="$router.push('/categories/add')"
+            >Add Category</a-button
           >
           <div class="mb-2"></div>
-          <a-button @click="$router.push('/catagorey/1/edit')">Edit</a-button>
+          <a-button @click="$router.push('/categories/1/edit')">Edit</a-button>
           <a-button class="ml-2">Send Email</a-button>
           <a-dropdown>
             <a-menu slot="overlay">

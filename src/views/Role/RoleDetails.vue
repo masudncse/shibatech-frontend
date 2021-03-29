@@ -1,15 +1,13 @@
 <template>
-  <div class="country-details">
+  <div class="role-details">
     <a-row>
       <a-col :span="24">
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/countries"
-              >Countries</router-link
-            ></a-breadcrumb-item
+            ><router-link to="/roles">Roles</router-link></a-breadcrumb-item
           >
-          <a-breadcrumb-item>Bangladesh</a-breadcrumb-item>
+          <a-breadcrumb-item>Editor</a-breadcrumb-item>
         </a-breadcrumb>
       </a-col>
     </a-row>
@@ -26,16 +24,14 @@
         <a-col :span="12">
           <div class="info-block">
             <div class="info-block__icon">
-              <a-icon type="deployment-unit" />
+              <a-icon type="user" />
             </div>
             <div class="info-block__info">
-              <h5>Japan</h5>
-
+              <h5>Editor</h5>
               <a
-                href="http://google.com"
-                target="_blank"
+                href="mailto:masud.ncse@gmail.com"
                 class="text-black-50 d-block"
-                >google.com</a
+                >masud.ncse@gmail.com</a
               >
             </div>
           </div>
@@ -44,16 +40,17 @@
           <a-button
             type="primary"
             icon="plus"
-            @click="$router.push('/countries/add')"
-            >Add Country</a-button
+            @click="$router.push('/roles/add')"
+            >Add Role</a-button
           >
           <div class="mb-2"></div>
-          <a-button @click="$router.push('/catagorey/1/edit')">Edit</a-button>
+          <a-button @click="$router.push('/roles/1/edit')">Edit</a-button>
           <a-button class="ml-2">Send Email</a-button>
           <a-dropdown>
             <a-menu slot="overlay">
-              <a-menu-item key="1"> Delete Country </a-menu-item>
+              <a-menu-item key="1"> Delete Role </a-menu-item>
               <a-menu-item key="2"> Duplicate </a-menu-item>
+              <a-menu-item key="3"> Create Purchase Order </a-menu-item>
             </a-menu>
             <a-button class="ml-2"> More <a-icon type="down" /> </a-button>
           </a-dropdown>
@@ -119,13 +116,13 @@
         <a-card title="Basic Information">
           <a-row :gutter="15">
             <a-col :span="12">
-              <a-form-item label="Country Name" labelAlign="left" class="mb-1">
-                Japan
+              <a-form-item label="Role Name" labelAlign="left" class="mb-1">
+                Editor
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="Active Status" labelAlign="left" class="mb-1">
-                <a-checkbox @change="onChange" default-checked> </a-checkbox>
+              <a-form-item label="Role Status" labelAlign="left" class="mb-1">
+                Active
               </a-form-item>
             </a-col>
             <a-col :span="12">
@@ -135,40 +132,8 @@
             </a-col>
 
             <a-col :span="12">
-              <a-form-item label="Website" labelAlign="left" class="mb-1">
-                http://google.com
-              </a-form-item>
-            </a-col>
-            <a-col :span="12">
               <a-form-item label="Modified Time" labelAlign="left" class="mb-1">
                 2021-01-27 04:03 AM
-              </a-form-item>
-            </a-col>
-          </a-row>
-        </a-card>
-        <br />
-
-        <a-card title="Description Details">
-          <a-row :gutter="15">
-            <a-col :span="24">
-              <a-form-item
-                label="Description"
-                :label-col="{ span: 3 }"
-                :wrapper-col="{ span: 18 }"
-                class="mb-0"
-                labelAlign="left"
-              >
-                <p class="mb-0" style="line-height: 1rem">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-                  voluptas nostrum commodi ullam aperiam non architecto illum
-                  consequuntur facilis reiciendis! Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Accusamus sed expedita
-                  temporibus laboriosam quaerat eligendi blanditiis odio impedit
-                  ducimus? Aliquam nemo ad repellat illo deserunt, atque, quod
-                  perferendis magnam necessitatibus similique cum? Eveniet,
-                  aliquam non. Voluptates repellat ullam ut illo iusto nam
-                  laborum, commodi recusandae minima impedit saepe aut. Aperiam!
-                </p>
               </a-form-item>
             </a-col>
           </a-row>
@@ -193,11 +158,11 @@ export default {
         },
         {
           path: "first",
-          breadcrumbName: "Country",
+          breadcrumbName: "Roles",
         },
         {
           path: "second",
-          breadcrumbName: "Japan",
+          breadcrumbName: "Md. Masudul Kabir",
         },
       ],
     };

@@ -1,15 +1,15 @@
 <template>
-  <div class="country-details">
+  <div class="vendor-details">
     <a-row>
       <a-col :span="24">
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/countries"
-              >Countries</router-link
+            ><router-link to="/company-info"
+              >Company Info</router-link
             ></a-breadcrumb-item
           >
-          <a-breadcrumb-item>Bangladesh</a-breadcrumb-item>
+          <a-breadcrumb-item>ABC Company</a-breadcrumb-item>
         </a-breadcrumb>
       </a-col>
     </a-row>
@@ -26,11 +26,18 @@
         <a-col :span="12">
           <div class="info-block">
             <div class="info-block__icon">
-              <a-icon type="deployment-unit" />
+              <a-icon type="user" />
             </div>
             <div class="info-block__info">
-              <h5>Japan</h5>
-
+              <h5>ABC Company</h5>
+              <a
+                href="mailto:masud.ncse@gmail.com"
+                class="text-black-50 d-block"
+                >masud.ncse@gmail.com</a
+              >
+              <a href="tel:01676717945" class="text-black-50 d-block"
+                >01676717945</a
+              >
               <a
                 href="http://google.com"
                 target="_blank"
@@ -41,30 +48,10 @@
           </div>
         </a-col>
         <a-col :span="12" align="end">
-          <a-button
-            type="primary"
-            icon="plus"
-            @click="$router.push('/countries/add')"
-            >Add Country</a-button
-          >
           <div class="mb-2"></div>
-          <a-button @click="$router.push('/catagorey/1/edit')">Edit</a-button>
-          <a-button class="ml-2">Send Email</a-button>
-          <a-dropdown>
-            <a-menu slot="overlay">
-              <a-menu-item key="1"> Delete Country </a-menu-item>
-              <a-menu-item key="2"> Duplicate </a-menu-item>
-            </a-menu>
-            <a-button class="ml-2"> More <a-icon type="down" /> </a-button>
-          </a-dropdown>
-          <a-button-group class="ml-2">
-            <a-button>
-              <a-icon type="left" />
-            </a-button>
-            <a-button>
-              <a-icon type="right" />
-            </a-button>
-          </a-button-group>
+          <a-button @click="$router.push('/company-info/edit')"
+            >Edit Info</a-button
+          >
         </a-col>
       </a-row>
     </a-layout-content>
@@ -116,59 +103,64 @@
       }"
     >
       <a-form :form="form" :label-col="{ span: 6 }" :wrapper-col="{ span: 12 }">
-        <a-card title="Basic Information">
+        <a-card title="Company Logo">
           <a-row :gutter="15">
-            <a-col :span="12">
-              <a-form-item label="Country Name" labelAlign="left" class="mb-1">
-                Japan
-              </a-form-item>
-            </a-col>
-            <a-col :span="12">
-              <a-form-item label="Active Status" labelAlign="left" class="mb-1">
-                <a-checkbox @change="onChange" default-checked> </a-checkbox>
-              </a-form-item>
-            </a-col>
-            <a-col :span="12">
-              <a-form-item label="Created Time" labelAlign="left" class="mb-1">
-                2021-01-27 04:03 AM
-              </a-form-item>
-            </a-col>
-
-            <a-col :span="12">
-              <a-form-item label="Website" labelAlign="left" class="mb-1">
-                http://google.com
-              </a-form-item>
-            </a-col>
-            <a-col :span="12">
-              <a-form-item label="Modified Time" labelAlign="left" class="mb-1">
-                2021-01-27 04:03 AM
-              </a-form-item>
+            <a-col :span="24">
+              <img src="http://www.jpremit.com/images/logo.png" alt="" />
             </a-col>
           </a-row>
         </a-card>
         <br />
-
-        <a-card title="Description Details">
+        <a-card title="Company Information">
           <a-row :gutter="15">
             <a-col :span="24">
-              <a-form-item
-                label="Description"
-                :label-col="{ span: 3 }"
-                :wrapper-col="{ span: 18 }"
-                class="mb-0"
-                labelAlign="left"
-              >
-                <p class="mb-0" style="line-height: 1rem">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-                  voluptas nostrum commodi ullam aperiam non architecto illum
-                  consequuntur facilis reiciendis! Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Accusamus sed expedita
-                  temporibus laboriosam quaerat eligendi blanditiis odio impedit
-                  ducimus? Aliquam nemo ad repellat illo deserunt, atque, quod
-                  perferendis magnam necessitatibus similique cum? Eveniet,
-                  aliquam non. Voluptates repellat ullam ut illo iusto nam
-                  laborum, commodi recusandae minima impedit saepe aut. Aperiam!
-                </p>
+              <a-form-item label="Company Name" labelAlign="left" class="mb-2">
+                ABC Company
+              </a-form-item>
+            </a-col>
+            <a-col :span="24">
+              <a-form-item label="Address" labelAlign="left" class="mb-2">
+                24, Gulshan Bonani
+              </a-form-item>
+            </a-col>
+            <a-col :span="24">
+              <a-form-item label="City" labelAlign="left" class="mb-2">
+                Dhaka
+              </a-form-item>
+            </a-col>
+            <a-col :span="24">
+              <a-form-item label="State" labelAlign="left" class="mb-2">
+                Dhaka
+              </a-form-item>
+            </a-col>
+            <a-col :span="24">
+              <a-form-item label="Postal Code	" labelAlign="left" class="mb-2">
+                1100
+              </a-form-item>
+            </a-col>
+            <a-col :span="24">
+              <a-form-item label="Country" labelAlign="left" class="mb-2">
+                Bangladesh
+              </a-form-item>
+            </a-col>
+            <a-col :span="24">
+              <a-form-item label="Phone" labelAlign="left" class="mb-2">
+                +8801676717945
+              </a-form-item>
+            </a-col>
+            <a-col :span="24">
+              <a-form-item label="Fax" labelAlign="left" class="mb-2">
+                +029588952
+              </a-form-item>
+            </a-col>
+            <a-col :span="24">
+              <a-form-item label="Website" labelAlign="left" class="mb-2">
+                http://example.com
+              </a-form-item>
+            </a-col>
+            <a-col :span="24">
+              <a-form-item label="VAT ID	" labelAlign="left" class="mb-2">
+                3241567456145
               </a-form-item>
             </a-col>
           </a-row>
@@ -193,11 +185,11 @@ export default {
         },
         {
           path: "first",
-          breadcrumbName: "Country",
+          breadcrumbName: "Vendors",
         },
         {
           path: "second",
-          breadcrumbName: "Japan",
+          breadcrumbName: "Md. Masudul Kabir",
         },
       ],
     };

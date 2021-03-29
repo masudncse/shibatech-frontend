@@ -2,12 +2,16 @@
   <div class="edit-unit">
     <a-row>
       <a-col :span="24">
-        <a-page-header
-          class="page--title"
-          title="Editing Unit - KG"
-          :breadcrumb="{ props: { routes } }"
-          sub-title=""
-        />
+        <div class="page--title">
+          <a-breadcrumb>
+            <a-breadcrumb-item>Home</a-breadcrumb-item>
+            <a-breadcrumb-item
+              ><router-link to="/units">Units</router-link></a-breadcrumb-item
+            >
+            <a-breadcrumb-item>Editing Unit - KG</a-breadcrumb-item>
+          </a-breadcrumb>
+          <a-page-header title="Editing Unit - KG" sub-title="" />
+        </div>
       </a-col>
     </a-row>
 
@@ -42,18 +46,13 @@
             </a-col>
             <a-col :span="12">
               <a-form-item label="Active status" labelAlign="left" class="mb-1">
-                <a-checkbox @change="onChange" default-checked>
-    
-  </a-checkbox>
+                <a-checkbox @change="onChange" default-checked> </a-checkbox>
               </a-form-item>
             </a-col>
-           
-           
-            
           </a-row>
         </a-card>
         <br />
-      
+
         <br />
         <a-card title="Description Details">
           <a-row :gutter="15">
@@ -110,7 +109,7 @@ export default {
     };
   },
   methods: {
-     onChange(e) {
+    onChange(e) {
       alert(`checked = ${e.target.checked}`);
     },
     handleSubmit(e) {

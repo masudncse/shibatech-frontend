@@ -5,9 +5,11 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/product/all">Products</router-link></a-breadcrumb-item
+            ><router-link to="/products"
+              >Products</router-link
+            ></a-breadcrumb-item
           >
-          <a-breadcrumb-item>Fan</a-breadcrumb-item>
+          <a-breadcrumb-item>Escalator 12 Ton</a-breadcrumb-item>
         </a-breadcrumb>
       </a-col>
     </a-row>
@@ -25,11 +27,10 @@
           <div class="info-block">
             <div class="info-block__icon">
               <a-icon type="deployment-unit" />
-              
             </div>
             <div class="info-block__info">
               <h5>Fan</h5>
-           
+
               <a
                 href="http://google.com"
                 target="_blank"
@@ -43,17 +44,16 @@
           <a-button
             type="primary"
             icon="plus"
-            @click="$router.push('/product/add')"
-            >product Add</a-button
+            @click="$router.push('/products/add')"
+            >Add Product</a-button
           >
           <div class="mb-2"></div>
-          <a-button @click="$router.push('/product/1/edit')">Edit</a-button>
+          <a-button @click="$router.push('/products/1/edit')">Edit</a-button>
           <a-button class="ml-2">Send Email</a-button>
           <a-dropdown>
             <a-menu slot="overlay">
               <a-menu-item key="1"> Delete Country </a-menu-item>
               <a-menu-item key="2"> Duplicate </a-menu-item>
-           
             </a-menu>
             <a-button class="ml-2"> More <a-icon type="down" /> </a-button>
           </a-dropdown>
@@ -118,18 +118,26 @@
       <a-form :form="form" :label-col="{ span: 6 }" :wrapper-col="{ span: 12 }">
         <a-card title="Basic Information">
           <a-row :gutter="15">
-               <a-col :span="12">
+            <a-col :span="12">
               <a-form-item label="Product Name" labelAlign="left" class="mb-1">
-              Fan
+                Fan
               </a-form-item>
             </a-col>
-                  <a-col :span="12">
-              <a-form-item label="Catagorey Name" labelAlign="left" class="mb-1">
+            <a-col :span="12">
+              <a-form-item
+                label="Catagorey Name"
+                labelAlign="left"
+                class="mb-1"
+              >
                 Electronics
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="MinuFecture Name" labelAlign="left" class="mb-1">
+              <a-form-item
+                label="MinuFecture Name"
+                labelAlign="left"
+                class="mb-1"
+              >
                 Walton
               </a-form-item>
             </a-col>
@@ -138,21 +146,23 @@
                 Hardip sing
               </a-form-item>
             </a-col>
-             <a-col :span="12">
+            <a-col :span="12">
               <a-form-item label="Unit Name" labelAlign="left" class="mb-1">
-               A
-              </a-form-item>
-             </a-col>
-                <a-col :span="12">
-              <a-form-item label="Recoder  lavel" labelAlign="left" class="mb-1">
-             Example
+                A
               </a-form-item>
             </a-col>
-              <a-col :span="12">
+            <a-col :span="12">
+              <a-form-item
+                label="Recoder  lavel"
+                labelAlign="left"
+                class="mb-1"
+              >
+                Example
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
               <a-form-item label="Active Status" labelAlign="left" class="mb-1">
-                               <a-checkbox @change="onChange" default-checked>
-    
-  </a-checkbox>
+                <a-checkbox @change="onChange" default-checked> </a-checkbox>
               </a-form-item>
             </a-col>
             <a-col :span="12">
@@ -160,8 +170,7 @@
                 2021-01-27 04:03 AM
               </a-form-item>
             </a-col>
-        
-    
+
             <a-col :span="12">
               <a-form-item label="Website" labelAlign="left" class="mb-1">
                 http://google.com
@@ -175,9 +184,6 @@
           </a-row>
         </a-card>
         <br />
-       
-     
-       
       </a-form>
     </a-layout-content>
   </div>

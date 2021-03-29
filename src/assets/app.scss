@@ -29,6 +29,51 @@ html {
   background-color: red;
 }
 
+.ant-table-selection-column {
+  width: 1%;
+}
+
+.table {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5;
+  list-style: none;
+  font-feature-settings: "tnum";
+  font-family: "Lato", sans-serif !important;
+
+  thead {
+    background: #fafafa;
+    th {
+      border-bottom: 1px solid #e8e8e8;
+      transition: background 0.3s ease;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+  td,
+  th {
+    border: none;
+    padding: 16px 16px;
+    overflow-wrap: break-word;
+  }
+  tbody {
+    tr {
+      transition: background 0.3s ease;
+      &:hover {
+        background-color: #e6f7ff;
+      }
+    }
+    td {
+      border-bottom: 1px solid #e8e8e8;
+      transition: background 0.3s;
+      font-weight: 400;
+    }
+  }
+}
+
 .page--title {
   padding: 16px 0 16px 0 !important;
 

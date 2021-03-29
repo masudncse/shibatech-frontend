@@ -5,8 +5,8 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/catagorey/all"
-              >Catagorey all</router-link
+            ><router-link to="/categories"
+              >Catagories</router-link
             ></a-breadcrumb-item
           >
           <a-breadcrumb-item>All</a-breadcrumb-item>
@@ -17,8 +17,8 @@
           type="primary"
           icon="plus"
           class="mt-2"
-          @click="$router.push('/Catagorey/add')"
-          >Add Catagorey</a-button
+          @click="$router.push('/categories/add')"
+          >Add Category</a-button
         >
         <a-button class="mt-2 ml-2" @click="handleOpenSearchForm"
           >Search <a-icon :type="isOpenSearchForm ? 'up' : 'down'"
@@ -37,7 +37,7 @@
     >
       <a-form layout="inline" @submit.prevent="handleSearch">
         <a-form-item>
-          <a-input placeholder="Catagorey Name"> </a-input>
+          <a-input placeholder="Category Name"> </a-input>
         </a-form-item>
 
         <a-form-item>
@@ -107,12 +107,12 @@
             </a-popconfirm>
             <a-button
               type="default"
-              @click="$router.push(`/catagorey/${record.id}/edit`)"
+              @click="$router.push(`/categories/${record.id}/edit`)"
               icon="edit"
             />
             <a-button
               type="default"
-              @click="$router.push(`/catagorey/${record.id}/details`)"
+              @click="$router.push(`/categories/${record.id}/details`)"
               icon="info"
             />
           </a-button-group>
@@ -127,7 +127,7 @@ import reqwest from "reqwest";
 
 const columns = [
   {
-    title: "Catagorey Name ",
+    title: "Category Name ",
     dataIndex: "name",
     key: "name",
     sorter: true,
@@ -142,11 +142,11 @@ const columns = [
     scopedSlots: { customRender: "Active Status" },
   },
   {
-    title: "Catagorey Discription ",
+    title: "Category Discription ",
     dataIndex: "Discription",
     key: "Discription",
     sorter: true,
-    scopedSlots: { customRender: "Catagorey Discription" },
+    scopedSlots: { customRender: "Category Discription" },
   },
   {
     title: "Action",

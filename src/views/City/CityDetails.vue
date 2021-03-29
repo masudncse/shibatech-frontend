@@ -5,7 +5,7 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/City/all">City</router-link></a-breadcrumb-item
+            ><router-link to="/cities">Cities</router-link></a-breadcrumb-item
           >
           <a-breadcrumb-item>Dhaka</a-breadcrumb-item>
         </a-breadcrumb>
@@ -25,11 +25,10 @@
           <div class="info-block">
             <div class="info-block__icon">
               <a-icon type="deployment-unit" />
-              
             </div>
             <div class="info-block__info">
               <h5>Dhaka</h5>
-           
+
               <a
                 href="http://google.com"
                 target="_blank"
@@ -43,17 +42,16 @@
           <a-button
             type="primary"
             icon="plus"
-            @click="$router.push('/city/add')"
-            >City Add</a-button
+            @click="$router.push('/cities/add')"
+            >Add City</a-button
           >
           <div class="mb-2"></div>
-          <a-button @click="$router.push('/state/1/edit')">Edit</a-button>
+          <a-button @click="$router.push('/cities/1/edit')">Edit</a-button>
           <a-button class="ml-2">Send Email</a-button>
           <a-dropdown>
             <a-menu slot="overlay">
               <a-menu-item key="1"> Delete Country </a-menu-item>
               <a-menu-item key="2"> Duplicate </a-menu-item>
-           
             </a-menu>
             <a-button class="ml-2"> More <a-icon type="down" /> </a-button>
           </a-dropdown>
@@ -118,12 +116,12 @@
       <a-form :form="form" :label-col="{ span: 6 }" :wrapper-col="{ span: 12 }">
         <a-card title="Basic Information">
           <a-row :gutter="15">
-               <a-col :span="12">
+            <a-col :span="12">
               <a-form-item label="State Name" labelAlign="left" class="mb-1">
                 Mosko
               </a-form-item>
             </a-col>
-                  <a-col :span="12">
+            <a-col :span="12">
               <a-form-item label="City Name" labelAlign="left" class="mb-1">
                 Dhaka
               </a-form-item>
@@ -133,11 +131,9 @@
                 France
               </a-form-item>
             </a-col>
-              <a-col :span="12">
+            <a-col :span="12">
               <a-form-item label="Active Status" labelAlign="left" class="mb-1">
-                               <a-checkbox @change="onChange" default-checked>
-    
-  </a-checkbox>
+                <a-checkbox @change="onChange" default-checked> </a-checkbox>
               </a-form-item>
             </a-col>
             <a-col :span="12">
@@ -145,8 +141,7 @@
                 2021-01-27 04:03 AM
               </a-form-item>
             </a-col>
-        
-    
+
             <a-col :span="12">
               <a-form-item label="Website" labelAlign="left" class="mb-1">
                 http://google.com
@@ -160,9 +155,6 @@
           </a-row>
         </a-card>
         <br />
-       
-     
-       
       </a-form>
     </a-layout-content>
   </div>

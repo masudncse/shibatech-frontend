@@ -8,15 +8,20 @@ import CategoryRoutes from "./CategoryRoutes";
 import StateRoutes from "./StateRoutes";
 import CityRoutes from "./CityRoutes";
 import ProductRoutes from "./ProductRoutes";
-import DashboardLayout from "../views/Dashboard/Layout.vue";
+import Layout from "../views/Dashboard/Layout.vue";
 import Dashboard from "../views/Dashboard/index.vue";
+import RoleRoutes from "./RoleRoutes";
+import PermissionRoutes from "./PermissionRoutes";
+import CompanyInfoRoutes from "./CompanyInfoRoutes";
+import OrganizationRoutes from "./OrganizationRoutes";
+import ContactRoutes from "./ContactRoutes";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    component: DashboardLayout,
+    component: Layout,
     children: [
       {
         path: "",
@@ -30,6 +35,11 @@ const routes = [
       ...StateRoutes,
       ...CityRoutes,
       ...ProductRoutes,
+      ...RoleRoutes,
+      ...PermissionRoutes,
+      ...CompanyInfoRoutes,
+      ...OrganizationRoutes,
+      ...ContactRoutes,
     ],
   },
   {

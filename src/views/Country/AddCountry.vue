@@ -2,12 +2,18 @@
   <div class="add-country">
     <a-row>
       <a-col :span="24">
-        <a-page-header
-          class="page--title"
-          title="Creating New Country"
-          :breadcrumb="{ props: { routes } }"
-          sub-title=""
-        />
+        <div class="page--title">
+          <a-breadcrumb>
+            <a-breadcrumb-item>Home</a-breadcrumb-item>
+            <a-breadcrumb-item
+              ><router-link to="/countries"
+                >Caountries</router-link
+              ></a-breadcrumb-item
+            >
+            <a-breadcrumb-item>Adding new</a-breadcrumb-item>
+          </a-breadcrumb>
+          <a-page-header title="Creating New Country" sub-title="" />
+        </div>
       </a-col>
     </a-row>
 
@@ -28,8 +34,7 @@
           <a-row :gutter="15">
             <a-col :span="12">
               <a-form-item label="Country Name" labelAlign="left" class="mb-1">
-                <a-input 
-              
+                <a-input
                   v-decorator="[
                     'Country name',
                     {
@@ -38,24 +43,18 @@
                       ],
                     },
                   ]"
-               />
+                />
               </a-form-item>
             </a-col>
             <a-col :span="12">
               <a-form-item label="Active status" labelAlign="left" class="mb-1">
-                <a-checkbox @change="onChange">
-    
-  </a-checkbox>
+                <a-checkbox @change="onChange"> </a-checkbox>
               </a-form-item>
-             
             </a-col>
-           
-           
-            
           </a-row>
         </a-card>
         <br />
-      
+
         <br />
         <a-card title="Description Details">
           <a-row :gutter="15">
@@ -93,7 +92,6 @@
 export default {
   data() {
     return {
-      
       formLayout: "horizontal",
       form: this.$form.createForm(this, { name: "coordinated" }),
       routes: [
@@ -110,14 +108,13 @@ export default {
           breadcrumbName: "Creating",
         },
       ],
-    
     };
   },
   methods: {
-     onChange(e) {
+    onChange(e) {
       alert(`checked = ${e.target.checked}`);
     },
-  
+
     handleSubmit(e) {
       e.preventDefault();
       this.form.validateFields((err, values) => {

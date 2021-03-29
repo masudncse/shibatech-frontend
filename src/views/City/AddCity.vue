@@ -2,12 +2,16 @@
   <div class="add-state">
     <a-row>
       <a-col :span="24">
-        <a-page-header
-          class="page--title"
-          title="Creating New City"
-          :breadcrumb="{ props: { routes } }"
-          sub-title=""
-        />
+        <div class="page--title">
+          <a-breadcrumb>
+            <a-breadcrumb-item>Home</a-breadcrumb-item>
+            <a-breadcrumb-item
+              ><router-link to="/cities">Cities</router-link></a-breadcrumb-item
+            >
+            <a-breadcrumb-item>Adding new</a-breadcrumb-item>
+          </a-breadcrumb>
+          <a-page-header title="Creating New City" sub-title="" />
+        </div>
       </a-col>
     </a-row>
 
@@ -30,10 +34,10 @@
               <a-form-item label="City Name" labelAlign="left" class="mb-1">
                 <a-input
                   v-decorator="[
-                    'State name',
+                    'city_name',
                     {
                       rules: [
-                        { required: true, message: 'Please input your note!' },
+                        { required: true, message: 'Please input your city!' },
                       ],
                     },
                   ]"
@@ -184,23 +188,23 @@ export default {
       this.value = value;
       fetch(value, (data) => (this.data = data));
     },
-  },
-  onChange(e) {
-    alert(`checked = ${e.target.checked}`);
-  },
-  handleSubmit(e) {
-    e.preventDefault();
-    this.form.validateFields((err, values) => {
-      if (!err) {
-        console.log("Received values of form: ", values);
-      }
-    });
-  },
-  handleSelectChange(value) {
-    console.log(value);
-    this.form.setFieldsValue({
-      note: `Hi, ${value === "male" ? "man" : "lady"}!`,
-    });
+    onChange(e) {
+      alert(`checked = ${e.target.checked}`);
+    },
+    handleSubmit(e) {
+      e.preventDefault();
+      this.form.validateFields((err, values) => {
+        if (!err) {
+          console.log("Received values of form: ", values);
+        }
+      });
+    },
+    handleSelectChange(value) {
+      console.log(value);
+      this.form.setFieldsValue({
+        note: `Hi, ${value === "male" ? "man" : "lady"}!`,
+      });
+    },
   },
 };
 </script>

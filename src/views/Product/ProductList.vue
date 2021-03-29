@@ -5,8 +5,8 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/product/all"
-              >Product
+            ><router-link to="/products"
+              >Products
             </router-link></a-breadcrumb-item
           >
           <a-breadcrumb-item>All</a-breadcrumb-item>
@@ -17,7 +17,7 @@
           type="primary"
           icon="plus"
           class="mt-2"
-          @click="$router.push('/product/add')"
+          @click="$router.push('/products/add')"
           >Add Product</a-button
         >
         <a-button class="mt-2 ml-2" @click="handleOpenSearchForm"
@@ -113,12 +113,12 @@
             </a-popconfirm>
             <a-button
               type="default"
-              @click="$router.push(`/product/${record.id}/edit`)"
+              @click="$router.push(`/products/${record.id}/edit`)"
               icon="edit"
             />
             <a-button
               type="default"
-              @click="$router.push(`/product/${record.id}/details`)"
+              @click="$router.push(`/products/${record.id}/details`)"
               icon="info"
             />
           </a-button-group>

@@ -5,9 +5,9 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/vendors">Units</router-link></a-breadcrumb-item
+            ><router-link to="/units">Units</router-link></a-breadcrumb-item
           >
-          <a-breadcrumb-item>Unit A</a-breadcrumb-item>
+          <a-breadcrumb-item>KG</a-breadcrumb-item>
         </a-breadcrumb>
       </a-col>
     </a-row>
@@ -25,11 +25,10 @@
           <div class="info-block">
             <div class="info-block__icon">
               <a-icon type="deployment-unit" />
-              
             </div>
             <div class="info-block__info">
               <h5>Unit A</h5>
-           
+
               <a
                 href="http://google.com"
                 target="_blank"
@@ -43,17 +42,16 @@
           <a-button
             type="primary"
             icon="plus"
-            @click="$router.push('/unit/add')"
+            @click="$router.push('/units/add')"
             >Add Unit</a-button
           >
           <div class="mb-2"></div>
-          <a-button @click="$router.push('/unit/1/edit')">Edit</a-button>
+          <a-button @click="$router.push('/units/1/edit')">Edit</a-button>
           <a-button class="ml-2">Send Email</a-button>
           <a-dropdown>
             <a-menu slot="overlay">
               <a-menu-item key="1"> Delete Unit </a-menu-item>
               <a-menu-item key="2"> Duplicate </a-menu-item>
-           
             </a-menu>
             <a-button class="ml-2"> More <a-icon type="down" /> </a-button>
           </a-dropdown>
@@ -123,14 +121,12 @@
                 Unit A
               </a-form-item>
             </a-col>
-                <a-col :span="12">
+            <a-col :span="12">
               <a-form-item label="Active Status" labelAlign="left" class="mb-1">
-                               <a-checkbox @change="onChange" default-checked>
-    
-  </a-checkbox>
+                <a-checkbox @change="onChange" default-checked> </a-checkbox>
               </a-form-item>
             </a-col>
-          
+
             <a-col :span="12">
               <a-form-item label="Created Time" labelAlign="left" class="mb-1">
                 2021-01-27 04:03 AM
@@ -149,8 +145,7 @@
           </a-row>
         </a-card>
         <br />
-       
-     
+
         <a-card title="Description Details">
           <a-row :gutter="15">
             <a-col :span="24">

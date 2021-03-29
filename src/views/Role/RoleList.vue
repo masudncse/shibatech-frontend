@@ -1,13 +1,11 @@
 <template>
-  <div class="catagorey-list">
+  <div class="role-list">
     <a-row>
       <a-col :span="12">
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/countries"
-              >Countries</router-link
-            ></a-breadcrumb-item
+            ><router-link to="/roles">Roles</router-link></a-breadcrumb-item
           >
           <a-breadcrumb-item>All</a-breadcrumb-item>
         </a-breadcrumb>
@@ -17,8 +15,8 @@
           type="primary"
           icon="plus"
           class="mt-2"
-          @click="$router.push('/countries/add')"
-          >Add Country</a-button
+          @click="$router.push('/roles/add')"
+          >Add Role</a-button
         >
         <a-button class="mt-2 ml-2" @click="handleOpenSearchForm"
           >Search <a-icon :type="isOpenSearchForm ? 'up' : 'down'"
@@ -37,9 +35,14 @@
     >
       <a-form layout="inline" @submit.prevent="handleSearch">
         <a-form-item>
-          <a-input placeholder="Country Name"> </a-input>
+          <a-input placeholder="Role Name"> </a-input>
         </a-form-item>
-
+        <a-form-item>
+          <a-input placeholder="Primary Phone"> </a-input>
+        </a-form-item>
+        <a-form-item>
+          <a-input placeholder="Primary Email"> </a-input>
+        </a-form-item>
         <a-form-item>
           <a-button type="primary" html-type="submit">
             <a-icon type="search" /> Submit
@@ -90,13 +93,10 @@
           onChange: onSelectChange,
         }"
       >
+        <span style="width: 100px" slot="selection-column" slot-scope="text">{{ text }}</span>
         <span slot="name" slot-scope="text">{{ text }}</span>
-        <a slot="Discription" slot-scope="text">{{ text }}</a>
-
-        <div slot="Active Status" slot-scope="">
-          <a-checkbox> </a-checkbox>
-        </div>
-
+        <a slot="phone" slot-scope="text">{{ text }}</a>
+        <a slot="email" slot-scope="text">{{ text }}</a>
         <div slot="action" slot-scope="text, record">
           <a-button-group>
             <a-popconfirm
@@ -107,12 +107,12 @@
             </a-popconfirm>
             <a-button
               type="default"
-              @click="$router.push(`/countries/${record.id}/edit`)"
+              @click="$router.push(`/roles/${record.id}/edit`)"
               icon="edit"
             />
             <a-button
               type="default"
-              @click="$router.push(`/countries/${record.id}/details`)"
+              @click="$router.push(`/roles/${record.id}/details`)"
               icon="info"
             />
           </a-button-group>
@@ -127,7 +127,7 @@ import reqwest from "reqwest";
 
 const columns = [
   {
-    title: "Country Name ",
+    title: "Role Name ",
     dataIndex: "name",
     key: "name",
     sorter: true,
@@ -135,24 +135,9 @@ const columns = [
     scopedSlots: { customRender: "name" },
   },
   {
-    title: "Active Status",
-    dataIndex: "",
-    key: "x",
-    width: "10%",
-    scopedSlots: { customRender: "Active Status" },
-  },
-  {
-    title: "Country Discription ",
-    dataIndex: "Discription",
-    key: "Discription",
-    sorter: true,
-    scopedSlots: { customRender: "Country Discription" },
-  },
-
-  {
     title: "Action",
     dataIndex: "",
-    key: "xy",
+    key: "x",
     width: "10%",
     scopedSlots: { customRender: "action" },
   },
@@ -161,21 +146,15 @@ const columns = [
 const data = [
   {
     id: "1",
-    name: "France",
-    Discription:
-      "Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte",
+    name: "Admin",
   },
   {
     id: "2",
-    name: "Japan",
-    Discription:
-      "Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte",
+    name: "Editor",
   },
   {
     id: "3",
-    name: "Chaina",
-    Discription:
-      "Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte",
+    name: "Manager",
   },
 ];
 

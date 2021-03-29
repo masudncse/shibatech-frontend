@@ -2,12 +2,16 @@
   <div class="add-catagorey">
     <a-row>
       <a-col :span="24">
-        <a-page-header
-          class="page--title"
-          title="Creating New Catagorey"
-          :breadcrumb="{ props: { routes } }"
-          sub-title=""
-        />
+        <div class="page--title">
+          <a-breadcrumb>
+            <a-breadcrumb-item>Home</a-breadcrumb-item>
+            <a-breadcrumb-item
+              ><router-link to="/categories">Categories</router-link></a-breadcrumb-item
+            >
+            <a-breadcrumb-item>Adding new</a-breadcrumb-item>
+          </a-breadcrumb>
+          <a-page-header title="Creating New Category" sub-title="" />
+        </div>
       </a-col>
     </a-row>
 

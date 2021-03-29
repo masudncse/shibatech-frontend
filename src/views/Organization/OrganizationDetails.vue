@@ -1,15 +1,15 @@
 <template>
-  <div class="country-details">
+  <div class="organization-details">
     <a-row>
       <a-col :span="24">
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/countries"
-              >Countries</router-link
+            ><router-link to="/organizations"
+              >Organizations</router-link
             ></a-breadcrumb-item
           >
-          <a-breadcrumb-item>Bangladesh</a-breadcrumb-item>
+          <a-breadcrumb-item>ABC Company</a-breadcrumb-item>
         </a-breadcrumb>
       </a-col>
     </a-row>
@@ -26,11 +26,18 @@
         <a-col :span="12">
           <div class="info-block">
             <div class="info-block__icon">
-              <a-icon type="deployment-unit" />
+              <a-icon type="user" />
             </div>
             <div class="info-block__info">
-              <h5>Japan</h5>
-
+              <h5>ABC Company</h5>
+              <a
+                href="mailto:masud.ncse@gmail.com"
+                class="text-black-50 d-block"
+                >masud.ncse@gmail.com</a
+              >
+              <a href="tel:01676717945" class="text-black-50 d-block"
+                >01676717945</a
+              >
               <a
                 href="http://google.com"
                 target="_blank"
@@ -44,16 +51,19 @@
           <a-button
             type="primary"
             icon="plus"
-            @click="$router.push('/countries/add')"
-            >Add Country</a-button
+            @click="$router.push('/organizations/add')"
+            >Add Organization</a-button
           >
           <div class="mb-2"></div>
-          <a-button @click="$router.push('/catagorey/1/edit')">Edit</a-button>
+          <a-button @click="$router.push('/organizations/1/edit')"
+            >Edit</a-button
+          >
           <a-button class="ml-2">Send Email</a-button>
           <a-dropdown>
             <a-menu slot="overlay">
-              <a-menu-item key="1"> Delete Country </a-menu-item>
+              <a-menu-item key="1"> Delete Organization </a-menu-item>
               <a-menu-item key="2"> Duplicate </a-menu-item>
+              <a-menu-item key="3"> Create Purchase Order </a-menu-item>
             </a-menu>
             <a-button class="ml-2"> More <a-icon type="down" /> </a-button>
           </a-dropdown>
@@ -116,38 +126,125 @@
       }"
     >
       <a-form :form="form" :label-col="{ span: 6 }" :wrapper-col="{ span: 12 }">
-        <a-card title="Basic Information">
+        <a-card title="Organization Details">
           <a-row :gutter="15">
             <a-col :span="12">
-              <a-form-item label="Country Name" labelAlign="left" class="mb-1">
-                Japan
+              <a-form-item
+                label="Organization Name"
+                labelAlign="left"
+                class="mb-1"
+              >
+                ABC Company
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="Active Status" labelAlign="left" class="mb-1">
-                <a-checkbox @change="onChange" default-checked> </a-checkbox>
-              </a-form-item>
-            </a-col>
-            <a-col :span="12">
-              <a-form-item label="Created Time" labelAlign="left" class="mb-1">
-                2021-01-27 04:03 AM
-              </a-form-item>
-            </a-col>
-
-            <a-col :span="12">
-              <a-form-item label="Website" labelAlign="left" class="mb-1">
+              <a-form-item label="Website " labelAlign="left" class="mb-1">
                 http://google.com
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="Modified Time" labelAlign="left" class="mb-1">
-                2021-01-27 04:03 AM
+              <a-form-item label="Fax " labelAlign="left" class="mb-0">
+                +029588952
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item
+                label="Secondary Phone 	"
+                labelAlign="left"
+                class="mb-0"
+              >
+                +8801676717945
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Employees 	" labelAlign="left" class="mb-0">
+                120
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item
+                label="Primary Email 		"
+                labelAlign="left"
+                class="mb-0"
+              >
+                masud.cnse@gmail.com
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item
+                label="Secondary Email 	"
+                labelAlign="left"
+                class="mb-0"
+              >
+                abc@gmail.com
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Ownership " labelAlign="left" class="mb-0">
+                Md. Obaydul Kader
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Industry " labelAlign="left" class="mb-0">
+                Banking
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Rating " labelAlign="left" class="mb-0">
+                Active
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item
+                label="Annual Revenue 	"
+                labelAlign="left"
+                class="mb-0"
+              >
+                $50,00,000
               </a-form-item>
             </a-col>
           </a-row>
         </a-card>
         <br />
-
+        <a-card title="Address Details">
+          <a-row :gutter="15">
+            <a-col :span="24">
+              <a-row :gutter="15">
+                <a-col :span="12">
+                  <a-form-item label="Street" labelAlign="left" class="mb-1">
+                    13, Bonglas Bonani
+                  </a-form-item>
+                </a-col>
+                <a-col :span="12">
+                  <a-form-item label="PO Box" labelAlign="left" class="mb-1">
+                    02115
+                  </a-form-item>
+                </a-col>
+              </a-row>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="City" labelAlign="left" class="mb-1">
+                Dhaka
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="State" labelAlign="left" class="mb-1">
+                Dhaka
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Postal Code" labelAlign="left" class="mb-1">
+                1205
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Country" labelAlign="left" class="mb-1">
+               Bangladesh
+              </a-form-item>
+            </a-col>
+          </a-row>
+        </a-card>
+        <br />
         <a-card title="Description Details">
           <a-row :gutter="15">
             <a-col :span="24">
@@ -193,11 +290,11 @@ export default {
         },
         {
           path: "first",
-          breadcrumbName: "Country",
+          breadcrumbName: "Organizations",
         },
         {
           path: "second",
-          breadcrumbName: "Japan",
+          breadcrumbName: "Md. Masudul Kabir",
         },
       ],
     };

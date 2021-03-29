@@ -1,16 +1,16 @@
 <template>
-  <div class="add-unit">
+  <div class="add-role">
     <a-row>
       <a-col :span="24">
         <div class="page--title">
           <a-breadcrumb>
             <a-breadcrumb-item>Home</a-breadcrumb-item>
             <a-breadcrumb-item
-              ><router-link to="/units">Units</router-link></a-breadcrumb-item
+              ><router-link to="/roles">Roles</router-link></a-breadcrumb-item
             >
             <a-breadcrumb-item>Adding new</a-breadcrumb-item>
           </a-breadcrumb>
-          <a-page-header title="Creating New Unit" sub-title="" />
+          <a-page-header title="Creating New Role" sub-title="" />
         </div>
       </a-col>
     </a-row>
@@ -31,10 +31,10 @@
         <a-card title="Basic Information">
           <a-row :gutter="15">
             <a-col :span="12">
-              <a-form-item label="Unit Name" labelAlign="left" class="mb-1">
+              <a-form-item label="Role Name" labelAlign="left" class="mb-1">
                 <a-input
                   v-decorator="[
-                    'unit_name',
+                    'role_name',
                     {
                       rules: [
                         { required: true, message: 'Please input your note!' },
@@ -46,19 +46,7 @@
             </a-col>
             <a-col :span="12">
               <a-form-item label="Active status" labelAlign="left" class="mb-1">
-                <a-checkbox @change="onChange"> </a-checkbox>
-              </a-form-item>
-            </a-col>
-          </a-row>
-        </a-card>
-        <br />
-
-        <br />
-        <a-card title="Description Details">
-          <a-row :gutter="15">
-            <a-col :span="12">
-              <a-form-item label="Description" labelAlign="left" class="mb-0">
-                <a-textarea :auto-size="{ minRows: 4, maxRows: 6 }" />
+                <a-checkbox> </a-checkbox>
               </a-form-item>
             </a-col>
           </a-row>
@@ -92,26 +80,9 @@ export default {
     return {
       formLayout: "horizontal",
       form: this.$form.createForm(this, { name: "coordinated" }),
-      routes: [
-        {
-          path: "index",
-          breadcrumbName: "Home",
-        },
-        {
-          path: "first",
-          breadcrumbName: "Units",
-        },
-        {
-          path: "second",
-          breadcrumbName: "Adding new",
-        },
-      ],
     };
   },
   methods: {
-    onChange(e) {
-      alert(`checked = ${e.target.checked}`);
-    },
     handleSubmit(e) {
       e.preventDefault();
       this.form.validateFields((err, values) => {

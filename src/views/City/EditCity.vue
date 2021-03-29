@@ -2,12 +2,16 @@
   <div class="add-state">
     <a-row>
       <a-col :span="24">
-        <a-page-header
-          class="page--title"
-          title=" Eiditing this City"
-          :breadcrumb="{ props: { routes } }"
-          sub-title=""
-        />
+        <div class="page--title">
+          <a-breadcrumb>
+            <a-breadcrumb-item>Home</a-breadcrumb-item>
+            <a-breadcrumb-item
+              ><router-link to="/cities">Cities</router-link></a-breadcrumb-item
+            >
+            <a-breadcrumb-item>Editing : Dhaka...</a-breadcrumb-item>
+          </a-breadcrumb>
+          <a-page-header title="Editing City - Dhaka" sub-title="" />
+        </div>
       </a-col>
     </a-row>
 
@@ -15,7 +19,7 @@
       :form="form"
       :label-col="{ span: 6 }"
       :wrapper-col="{ span: 12 }"
-      @submit="handleSubmit"
+      @submit.prevent="handleSubmit"
     >
       <a-layout-content
         :style="{
@@ -28,8 +32,7 @@
           <a-row :gutter="15">
             <a-col :span="12">
               <a-form-item label="City Name" labelAlign="left" class="mb-1">
-                <a-input 
-              
+                <a-input
                   v-decorator="[
                     'City name',
                     {
@@ -38,66 +41,60 @@
                       ],
                     },
                   ]"
-               />
-               
+                />
               </a-form-item>
             </a-col>
             <a-col :span="12">
               <a-form-item label="Active status" labelAlign="left" class="mb-1">
-                <a-checkbox @change="onChange">
-    
-  </a-checkbox>
+                <a-checkbox> </a-checkbox>
               </a-form-item>
-             
             </a-col>
-           
-                  <a-col :span="12">
-                      <a-form-item label="State" labelAlign="left" class="ml-4">
-  <a-select
-    show-search
-    :value="value"
-    placeholder="Search your State"
-    style="width: 200px"
-    :default-active-first-option="false"
-    :show-arrow="false"
-    :filter-option="false"
-    :not-found-content="null"
-    @search="handleSearch"
-    @change="handleChange"
-  >
-    <a-select-option v-for="d in data" :key="d.value">
-      {{ d.text }}
-    </a-select-option>
-  </a-select>
-             </a-form-item>
+
+            <a-col :span="12">
+              <a-form-item label="State" labelAlign="left" class="mb-0">
+                <a-select
+                  show-search
+                  :value="value"
+                  placeholder="Search your State"
+                  style="width: 100%"
+                  :default-active-first-option="false"
+                  :show-arrow="false"
+                  :filter-option="false"
+                  :not-found-content="null"
+                  @search="handleSearch"
+                  @change="handleChange"
+                >
+                  <a-select-option v-for="d in data" :key="d.value">
+                    {{ d.text }}
+                  </a-select-option>
+                </a-select>
+              </a-form-item>
             </a-col>
-                          <a-col :span="12">
-                      <a-form-item label="Country" labelAlign="left" class="ml-4">
-  <a-select
-    show-search
-    :value="value"
-    placeholder="Search your Country"
-    style="width: 200px"
-    :default-active-first-option="false"
-    :show-arrow="false"
-    :filter-option="false"
-    :not-found-content="null"
-    @search="handleSearch"
-    @change="handleChange"
-  >
-    <a-select-option v-for="d in data" :key="d.value">
-      {{ d.text }}
-    </a-select-option>
-  </a-select>
-             </a-form-item>
+            <a-col :span="12">
+              <a-form-item label="Country" labelAlign="left" class="mb-0">
+                <a-select
+                  show-search
+                  :value="value"
+                  placeholder="Search your Country"
+                  style="width: 100%"
+                  :default-active-first-option="false"
+                  :show-arrow="false"
+                  :filter-option="false"
+                  :not-found-content="null"
+                  @search="handleSearch"
+                  @change="handleChange"
+                >
+                  <a-select-option v-for="d in data" :key="d.value">
+                    {{ d.text }}
+                  </a-select-option>
+                </a-select>
+              </a-form-item>
             </a-col>
-            
           </a-row>
         </a-card>
         <br />
-      
+
         <br />
-      
       </a-layout-content>
       <a-layout-content
         :style="{
@@ -122,8 +119,8 @@
 </template>
 
 <script>
-import jsonp from 'fetch-jsonp';
-import querystring from 'querystring';
+import jsonp from "fetch-jsonp";
+import querystring from "querystring";
 
 let timeout;
 let currentValue;
@@ -137,16 +134,16 @@ function fetch(value, callback) {
 
   function fake() {
     const str = querystring.encode({
-      code: 'utf-8',
+      code: "utf-8",
       q: value,
     });
     jsonp(`https://suggest.taobao.com/sug?${str}`)
-      .then(response => response.json())
-      .then(d => {
+      .then((response) => response.json())
+      .then((d) => {
         if (currentValue === value) {
           const result = d.result;
           const data = [];
-          result.forEach(r => {
+          result.forEach((r) => {
             data.push({
               value: r[0],
               text: r[0],
@@ -159,6 +156,7 @@ function fetch(value, callback) {
 
   timeout = setTimeout(fake, 300);
 }
+
 export default {
   data() {
     return {
@@ -180,25 +178,22 @@ export default {
           breadcrumbName: "Editing",
         },
       ],
-    
     };
   },
   methods: {
-
-
-       handleSearch(value) {
-      fetch(value, data => (this.data = data));
+    handleSearch(value) {
+      fetch(value, (data) => (this.data = data));
     },
     handleChange(value) {
       console.log(value);
       this.value = value;
-      fetch(value, data => (this.data = data));
+      fetch(value, (data) => (this.data = data));
     },
-  },
-     onChange(e) {
+
+    onChange(e) {
       alert(`checked = ${e.target.checked}`);
     },
-  
+
     handleSubmit(e) {
       e.preventDefault();
       this.form.validateFields((err, values) => {
@@ -213,7 +208,6 @@ export default {
         note: `Hi, ${value === "male" ? "man" : "lady"}!`,
       });
     },
-    
-  }
-
+  },
+};
 </script>
