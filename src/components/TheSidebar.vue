@@ -17,6 +17,46 @@
         <span>Company Info</span>
         <router-link to="/company-info"></router-link>
       </a-menu-item>
+      <a-menu-item key="task-progress">
+        <a-icon type="apartment" />
+        <span>Task Progress</span>
+        <router-link to="/task-progress"></router-link>
+      </a-menu-item>
+      <a-menu-item key="task-priorities">
+        <a-icon type="apartment" />
+        <span>Task Priorities</span>
+        <router-link to="/task-priorities"></router-link>
+      </a-menu-item>
+      <a-menu-item key="task-statuses">
+        <a-icon type="apartment" />
+        <span>Task Statuses</span>
+        <router-link to="/task-statuses"></router-link>
+      </a-menu-item>
+      <a-menu-item key="quote-stages">
+        <a-icon type="apartment" />
+        <span>Quote Stagess</span>
+        <router-link to="/quote-stages"></router-link>
+      </a-menu-item>
+      <a-menu-item key="inquiry-stages">
+        <a-icon type="apartment" />
+        <span>Inquiry Stages</span>
+        <router-link to="/inquiry-stages"></router-link>
+      </a-menu-item>
+      <a-menu-item key="recurring-infos">
+        <a-icon type="apartment" />
+        <span>Recurring Infos</span>
+        <router-link to="/recurring-infos"></router-link>
+      </a-menu-item>
+      <a-menu-item key="carriers">
+        <a-icon type="apartment" />
+        <span>Carriers</span>
+        <router-link to="/carriers"></router-link>
+      </a-menu-item>
+      <a-menu-item key="invoice-statuses">
+        <a-icon type="apartment" />
+        <span>Invoice Statuses</span>
+        <router-link to="/invoice-statuses"></router-link>
+      </a-menu-item>
       <a-sub-menu key="vendors">
         <span slot="title"><a-icon type="user" />Vendors</span>
         <a-menu-item key="1">

@@ -15,6 +15,14 @@ import PermissionRoutes from "./PermissionRoutes";
 import CompanyInfoRoutes from "./CompanyInfoRoutes";
 import OrganizationRoutes from "./OrganizationRoutes";
 import ContactRoutes from "./ContactRoutes";
+import TaskProgressRoutes from "./TaskProgressRoutes";
+import TaskPriorityRoutes from "./TaskPriorityRoutes";
+import TaskStatusRoutes from "./TaskStatusRoutes";
+import InquiryStageRoutes from "./InquiryStageRoutes";
+import RecurringInfoRoutes from "./RecurringInfoRoutes";
+import InvoiceStatusRoutes from "./InvoiceStatusRoutes";
+import CarrierRoutes from "./CarrierRoutes";
+import QuoteStageRoutes from "./QuoteStageRoutes";
 
 Vue.use(VueRouter);
 
@@ -40,6 +48,14 @@ const routes = [
       ...CompanyInfoRoutes,
       ...OrganizationRoutes,
       ...ContactRoutes,
+      ...TaskProgressRoutes,
+      ...TaskPriorityRoutes,
+      ...TaskStatusRoutes,
+      ...InquiryStageRoutes,
+      ...QuoteStageRoutes,
+      ...RecurringInfoRoutes,
+      ...InvoiceStatusRoutes,
+      ...CarrierRoutes,
     ],
   },
   {
