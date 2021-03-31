@@ -57,114 +57,66 @@
         <span>Invoice Statuses</span>
         <router-link to="/invoice-statuses"></router-link>
       </a-menu-item>
-      <a-sub-menu key="vendors">
-        <span slot="title"><a-icon type="user" />Vendors</span>
-        <a-menu-item key="1">
-          <router-link to="/vendors/add">Add New</router-link>
-        </a-menu-item>
-        <a-menu-item key="2">
-          <router-link to="/vendors">All Vendors</router-link>
-        </a-menu-item>
-      </a-sub-menu>
-      <a-sub-menu key="units">
-        <span slot="title"><a-icon type="deployment-unit" />Units</span>
-        <a-menu-item key="3">
-          <router-link to="/units/add">Add New</router-link>
-        </a-menu-item>
-        <a-menu-item key="4">
-          <router-link to="/units">All Units</router-link>
-        </a-menu-item>
-      </a-sub-menu>
-      <a-sub-menu key="categories">
-        <span slot="title"><a-icon type="deployment-unit" />Catagories</span>
-        <a-menu-item key="5">
-          <router-link to="/categories/add">Add New</router-link>
-        </a-menu-item>
-        <a-menu-item key="6">
-          <router-link to="/categories">All Categories</router-link>
-        </a-menu-item>
-      </a-sub-menu>
-      <a-sub-menu key="countries">
-        <span slot="title"><a-icon type="deployment-unit" />Countries</span>
-        <a-menu-item key="7">
-          <router-link to="/countries/add">Add New</router-link>
-        </a-menu-item>
-        <a-menu-item key="8">
-          <router-link to="/countries">All Countries</router-link>
-        </a-menu-item>
-      </a-sub-menu>
-      <a-sub-menu key="states">
-        <span slot="title"><a-icon type="deployment-unit" />States</span>
-        <a-menu-item key="9">
-          <router-link to="/states/add">Add New</router-link>
-        </a-menu-item>
-        <a-menu-item key="10">
-          <router-link to="/states">All States</router-link>
-        </a-menu-item>
-      </a-sub-menu>
-      <a-sub-menu key="cities">
-        <span slot="title"><a-icon type="deployment-unit" />Cities</span>
-        <a-menu-item key="11">
-          <router-link to="/cities/add">Add New</router-link>
-        </a-menu-item>
-        <a-menu-item key="12">
-          <router-link to="/cities">All Cities</router-link>
-        </a-menu-item>
-      </a-sub-menu>
-      <a-sub-menu key="products">
-        <span slot="title"><a-icon type="star" />Products</span>
-        <a-menu-item key="13">
-          <router-link to="/products/add">Add New</router-link>
-        </a-menu-item>
-        <a-menu-item key="14">
-          <router-link to="/products">All Products</router-link>
-        </a-menu-item>
-      </a-sub-menu>
-      <a-sub-menu key="users">
-        <span slot="title"><a-icon type="star" />Users</span>
-        <a-menu-item key="13">
-          <router-link to="/users/add">Add New</router-link>
-        </a-menu-item>
-        <a-menu-item key="14">
-          <router-link to="/users">All Users</router-link>
-        </a-menu-item>
-      </a-sub-menu>
-      <a-sub-menu key="roles">
-        <span slot="title"><a-icon type="star" />Roles</span>
-        <a-menu-item key="13">
-          <router-link to="/roles/add">Add New</router-link>
-        </a-menu-item>
-        <a-menu-item key="14">
-          <router-link to="/roles">All Roles</router-link>
-        </a-menu-item>
-      </a-sub-menu>
-      <a-sub-menu key="permissions">
-        <span slot="title"><a-icon type="star" />Permissions</span>
-        <a-menu-item key="13">
-          <router-link to="/permissions/add">Add New</router-link>
-        </a-menu-item>
-        <a-menu-item key="14">
-          <router-link to="/permissions">All Permissions</router-link>
-        </a-menu-item>
-      </a-sub-menu>
-      <a-sub-menu key="organizations">
-        <span slot="title"><a-icon type="star" />Organizations</span>
-        <a-menu-item key="13">
-          <router-link to="/organizations/add">Add New</router-link>
-        </a-menu-item>
-        <a-menu-item key="14">
-          <router-link to="/organizations">All Organizations</router-link>
-        </a-menu-item>
-      </a-sub-menu>
-      <a-sub-menu key="contacts">
-        <span slot="title"><a-icon type="star" />Contacts</span>
-        <a-menu-item key="13">
-          <router-link to="/contacts/add">Add New</router-link>
-        </a-menu-item>
-        <a-menu-item key="14">
-          <router-link to="/contacts">All Contacts</router-link>
-        </a-menu-item>
-      </a-sub-menu>
+      <a-menu-item key="vendors">
+        <a-icon type="apartment" />
+        <span>Vendors</span>
+        <router-link to="/vendors"></router-link>
+      </a-menu-item>
+      <a-menu-item key="units">
+        <a-icon type="apartment" />
+        <span>Units</span>
+        <router-link to="/units"></router-link>
+      </a-menu-item>
+      <a-menu-item key="categories">
+        <a-icon type="apartment" />
+        <span>Catagories</span>
+        <router-link to="/categories"></router-link>
+      </a-menu-item>
+      <a-menu-item key="countries">
+        <a-icon type="apartment" />
+        <span>Countries</span>
+        <router-link to="/countries"></router-link>
+      </a-menu-item>
+      <a-menu-item key="states">
+        <a-icon type="apartment" />
+        <span>States</span>
+        <router-link to="/states"></router-link>
+      </a-menu-item>
+      <a-menu-item key="cities">
+        <a-icon type="apartment" />
+        <span>Cities</span>
+        <router-link to="/cities"></router-link>
+      </a-menu-item>
+      <a-menu-item key="products">
+        <a-icon type="apartment" />
+        <span>Products</span>
+        <router-link to="/products"></router-link>
+      </a-menu-item>
+      <a-menu-item key="users">
+        <a-icon type="apartment" />
+        <span>Users</span>
+        <router-link to="/users"></router-link>
+      </a-menu-item>
+      <a-menu-item key="roles">
+        <a-icon type="apartment" />
+        <span>Roles</span>
+        <router-link to="/roles"></router-link>
+      </a-menu-item>
+      <a-menu-item key="permissions">
+        <a-icon type="apartment" />
+        <span>Permissions</span>
+        <router-link to="/permissions"></router-link>
+      </a-menu-item>
+      <a-menu-item key="organizations">
+        <a-icon type="apartment" />
+        <span>Organizations</span>
+        <router-link to="/organizations"></router-link>
+      </a-menu-item>
+      <a-menu-item key="contacts">
+        <a-icon type="apartment" />
+        <span>Contacts</span>
+        <router-link to="/contacts"></router-link>
+      </a-menu-item>
     </a-menu>
   </a-layout-sider>
 </template>>
