@@ -10,9 +10,9 @@
                 >Task Progress</router-link
               ></a-breadcrumb-item
             >
-            <a-breadcrumb-item>Editing : Test Ite...</a-breadcrumb-item>
+            <a-breadcrumb-item>Editing : Ite...</a-breadcrumb-item>
           </a-breadcrumb>
-          <a-page-header title="Editing Task Progress - Test Items" sub-title="" />
+          <a-page-header title="Editing Task Progress -  Items" sub-title="" />
         </div>
       </a-col>
     </a-row>

@@ -6,11 +6,11 @@
           <a-breadcrumb>
             <a-breadcrumb-item>Home</a-breadcrumb-item>
             <a-breadcrumb-item
-              ><router-link to="/company-info"
+              ><router-link to="/settings/company-info"
                 >Company Info</router-link
               ></a-breadcrumb-item
             >
-            <a-breadcrumb-item>Editing : ABC Compan...</a-breadcrumb-item>
+            <a-breadcrumb-item>Editing</a-breadcrumb-item>
           </a-breadcrumb>
           <a-page-header title="Editing Company Information" sub-title="" />
         </div>
@@ -45,66 +45,68 @@
             </a-col>
           </a-row>
         </a-card>
-        <br />
+      </a-layout-content>
+
+      <a-layout-content
+        :style="{
+          background: '#fff',
+          padding: '24px',
+          marginTop: '15px',
+        }"
+      >
         <a-card title="Company Information">
           <a-row :gutter="15">
             <a-col :span="24">
               <a-form-item label="Company Name" labelAlign="left" class="mb-2">
-                <a-input
-                  v-decorator="[
-                    'company_name',
-                    {
-                      rules: [
-                        { required: true, message: 'Please input your note!' },
-                      ],
-                    },
-                  ]"
-                />
+                <a-input value="Shibatech Corporation Ltd." />
               </a-form-item>
             </a-col>
             <a-col :span="24">
               <a-form-item label="Address" labelAlign="left" class="mb-2">
-                <a-textarea :auto-size="{ minRows: 5, maxRows: 5 }" />
+                <a-textarea
+                  :auto-size="{ minRows: 5, maxRows: 5 }"
+                  value="Level-21, Ahmed Tower, Kemal Ataturk Ave"
+                />
               </a-form-item>
             </a-col>
             <a-col :span="24">
               <a-form-item label="City" labelAlign="left" class="mb-2">
-                <a-input />
+                <a-input value="Dhaka" />
               </a-form-item>
             </a-col>
             <a-col :span="24">
               <a-form-item label="State" labelAlign="left" class="mb-2">
-                <a-input />
+                <a-input value="Dhaka" />
               </a-form-item>
             </a-col>
             <a-col :span="24">
               <a-form-item label="Postal Code	" labelAlign="left" class="mb-2">
-                <a-input />
+                <a-input value="1213" />
               </a-form-item>
             </a-col>
             <a-col :span="24">
               <a-form-item label="Country" labelAlign="left" class="mb-2">
-                <a-input />
+                <a-input value="Bangladesh" />
               </a-form-item>
             </a-col>
             <a-col :span="24">
               <a-form-item label="Phone" labelAlign="left" class="mb-2">
-                <a-input />
+                <a-input value="+8801676717945" />
               </a-form-item>
             </a-col>
             <a-col :span="24">
               <a-form-item label="Fax" labelAlign="left" class="mb-2">
-                <a-input />
+                <a-input value="+0221254525" />
               </a-form-item>
             </a-col>
             <a-col :span="24">
               <a-form-item label="Website" labelAlign="left" class="mb-2">
-                <a-input />
+                <a-input value="example.com" />
               </a-form-item>
             </a-col>
             <a-col :span="24">
-              <a-form-item label="VAT ID	" labelAlign="left" class="mb-2">
-                <a-input />
+              <a-form-item label="VAT ID" labelAlign="left" class="mb-2">
+                <a-input value="245561567654116" />
               </a-form-item>
             </a-col>
           </a-row>

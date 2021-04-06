@@ -1,13 +1,15 @@
 <template>
-  <div class="Unit-details">
+  <div class="particulars-details">
     <a-row>
       <a-col :span="24">
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/categories">Categories</router-link></a-breadcrumb-item
+            ><router-link to="/commission-tasks"
+              >Commission Tasks</router-link
+            ></a-breadcrumb-item
           >
-          <a-breadcrumb-item>Electronic</a-breadcrumb-item>
+          <a-breadcrumb-item>Task 1</a-breadcrumb-item>
         </a-breadcrumb>
       </a-col>
     </a-row>
@@ -25,11 +27,10 @@
           <div class="info-block">
             <div class="info-block__icon">
               <a-icon type="deployment-unit" />
-              
             </div>
             <div class="info-block__info">
-              <h5>Electronic</h5>
-           
+              <h5>Task 1</h5>
+
               <a
                 href="http://google.com"
                 target="_blank"
@@ -43,17 +44,19 @@
           <a-button
             type="primary"
             icon="plus"
-            @click="$router.push('/categories/add')"
-            >Add Category</a-button
+            @click="$router.push('/commission-tasks/add')"
+          >
+            Add New Item</a-button
           >
           <div class="mb-2"></div>
-          <a-button @click="$router.push('/categories/1/edit')">Edit</a-button>
+          <a-button @click="$router.push('/commission-tasks/1/edit')"
+            >Edit</a-button
+          >
           <a-button class="ml-2">Send Email</a-button>
           <a-dropdown>
             <a-menu slot="overlay">
-              <a-menu-item key="1"> Delete Catagorey </a-menu-item>
+              <a-menu-item key="1"> Delete commitiontasks </a-menu-item>
               <a-menu-item key="2"> Duplicate </a-menu-item>
-           
             </a-menu>
             <a-button class="ml-2"> More <a-icon type="down" /> </a-button>
           </a-dropdown>
@@ -119,27 +122,17 @@
         <a-card title="Basic Information">
           <a-row :gutter="15">
             <a-col :span="12">
-              <a-form-item label="Catagorey Name" labelAlign="left" class="mb-1">
-                Electronic
-              </a-form-item>
-            </a-col>
-              <a-col :span="12">
-              <a-form-item label="Active Status" labelAlign="left" class="mb-1">
-                               <a-checkbox @change="onChange" default-checked>
-    
-  </a-checkbox>
+              <a-form-item
+                label="Commition Tasks "
+                labelAlign="left"
+                class="mb-1"
+              >
+                Task 1
               </a-form-item>
             </a-col>
             <a-col :span="12">
               <a-form-item label="Created Time" labelAlign="left" class="mb-1">
                 2021-01-27 04:03 AM
-              </a-form-item>
-            </a-col>
-        
-    
-            <a-col :span="12">
-              <a-form-item label="Website" labelAlign="left" class="mb-1">
-                http://google.com
               </a-form-item>
             </a-col>
             <a-col :span="12">
@@ -150,33 +143,6 @@
           </a-row>
         </a-card>
         <br />
-       
-     
-        <a-card title="Description Details">
-          <a-row :gutter="15">
-            <a-col :span="24">
-              <a-form-item
-                label="Description"
-                :label-col="{ span: 3 }"
-                :wrapper-col="{ span: 18 }"
-                class="mb-0"
-                labelAlign="left"
-              >
-                <p class="mb-0" style="line-height: 1rem">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-                  voluptas nostrum commodi ullam aperiam non architecto illum
-                  consequuntur facilis reiciendis! Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Accusamus sed expedita
-                  temporibus laboriosam quaerat eligendi blanditiis odio impedit
-                  ducimus? Aliquam nemo ad repellat illo deserunt, atque, quod
-                  perferendis magnam necessitatibus similique cum? Eveniet,
-                  aliquam non. Voluptates repellat ullam ut illo iusto nam
-                  laborum, commodi recusandae minima impedit saepe aut. Aperiam!
-                </p>
-              </a-form-item>
-            </a-col>
-          </a-row>
-        </a-card>
       </a-form>
     </a-layout-content>
   </div>
@@ -197,7 +163,7 @@ export default {
         },
         {
           path: "first",
-          breadcrumbName: "Catagorey",
+          breadcrumbName: "commitiontasks",
         },
         {
           path: "second",

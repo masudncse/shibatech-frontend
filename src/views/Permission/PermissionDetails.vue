@@ -7,7 +7,7 @@
           <a-breadcrumb-item
             ><router-link to="/permissions">Permissions</router-link></a-breadcrumb-item
           >
-          <a-breadcrumb-item>Create Vendors</a-breadcrumb-item>
+          <a-breadcrumb-item>Permission 1</a-breadcrumb-item>
         </a-breadcrumb>
       </a-col>
     </a-row>
@@ -27,7 +27,7 @@
               <a-icon type="user" />
             </div>
             <div class="info-block__info">
-              <h5>Create Vendors</h5>
+              <h5>Permission 1</h5>
               <a
                 href="mailto:masud.ncse@gmail.com"
                 class="text-black-50 d-block"
@@ -117,7 +117,7 @@
           <a-row :gutter="15">
             <a-col :span="12">
               <a-form-item label="Permission Name" labelAlign="left" class="mb-1">
-                Create Vendors
+                Permission 1
               </a-form-item>
             </a-col>
             <a-col :span="12">

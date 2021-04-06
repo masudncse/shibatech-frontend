@@ -63,7 +63,15 @@
             </a-col>
           </a-row>
         </a-card>
-        <br />
+      </a-layout-content>
+
+      <a-layout-content
+        :style="{
+          background: '#fff',
+          padding: '24px',
+          marginTop: '15px',
+        }"
+      >
         <a-card title="Address Details">
           <a-row :gutter="15">
             <a-col :span="24">
@@ -102,7 +110,15 @@
             </a-col>
           </a-row>
         </a-card>
-        <br />
+      </a-layout-content>
+
+      <a-layout-content
+        :style="{
+          background: '#fff',
+          padding: '24px',
+          marginTop: '15px',
+        }"
+      >
         <a-card title="Description Details">
           <a-row :gutter="15">
             <a-col :span="12">
@@ -113,6 +129,7 @@
           </a-row>
         </a-card>
       </a-layout-content>
+
       <a-layout-content
         :style="{
           background: '#fff',

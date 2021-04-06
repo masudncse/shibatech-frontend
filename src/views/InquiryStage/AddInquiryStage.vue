@@ -12,7 +12,7 @@
             >
             <a-breadcrumb-item>Adding new</a-breadcrumb-item>
           </a-breadcrumb>
-          <a-page-header title="Creating New Inquery Stage Item" sub-title="" />
+          <a-page-header title="Creating New Inquiry Stage Item" sub-title="" />
         </div>
       </a-col>
     </a-row>

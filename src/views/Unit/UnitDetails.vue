@@ -7,7 +7,7 @@
           <a-breadcrumb-item
             ><router-link to="/units">Units</router-link></a-breadcrumb-item
           >
-          <a-breadcrumb-item>KG</a-breadcrumb-item>
+          <a-breadcrumb-item>Unit 1</a-breadcrumb-item>
         </a-breadcrumb>
       </a-col>
     </a-row>
@@ -27,7 +27,7 @@
               <a-icon type="deployment-unit" />
             </div>
             <div class="info-block__info">
-              <h5>Unit A</h5>
+              <h5>Unit 1</h5>
 
               <a
                 href="http://google.com"
@@ -118,7 +118,7 @@
           <a-row :gutter="15">
             <a-col :span="12">
               <a-form-item label="Unit Name" labelAlign="left" class="mb-1">
-                Unit A
+                Unit 1
               </a-form-item>
             </a-col>
             <a-col :span="12">
@@ -126,15 +126,9 @@
                 <a-checkbox @change="onChange" default-checked> </a-checkbox>
               </a-form-item>
             </a-col>
-
             <a-col :span="12">
               <a-form-item label="Created Time" labelAlign="left" class="mb-1">
                 2021-01-27 04:03 AM
-              </a-form-item>
-            </a-col>
-            <a-col :span="12">
-              <a-form-item label="Website" labelAlign="left" class="mb-1">
-                http://google.com
               </a-form-item>
             </a-col>
             <a-col :span="12">

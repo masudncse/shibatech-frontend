@@ -161,18 +161,13 @@ const data = [
   {
     id: "1",
 
-    Name: "Active",
+    Name: "Status 1",
     Color: "Blue",
   },
   {
     id: "2",
-    Name: "Inactive",
-    Color: "red",
-  },
-  {
-    id: "3",
-    Name: "Cancel",
-    Color: "Green",
+    Name: "Status 2",
+    Color: "Red",
   },
 ];
 

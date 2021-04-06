@@ -150,15 +150,15 @@ const columns = [
 const data = [
   {
     id: "1",
-    name: "Example",
+    name: "Carrier 1",
   },
   {
     id: "2",
-    name: "Example",
+    name: "Carrier 2",
   },
   {
     id: "3",
-    name: "Example",
+    name: "Carrier 3",
   },
 ];
 

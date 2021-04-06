@@ -1,16 +1,21 @@
 <template>
-  <div class="add-catagorey">
+  <div class="add-particular">
     <a-row>
       <a-col :span="24">
         <div class="page--title">
           <a-breadcrumb>
             <a-breadcrumb-item>Home</a-breadcrumb-item>
             <a-breadcrumb-item
-              ><router-link to="/categories">Categories</router-link></a-breadcrumb-item
+              ><router-link to="/commission-tasks"
+                >Commission Tasks</router-link
+              ></a-breadcrumb-item
             >
-            <a-breadcrumb-item>Adding new</a-breadcrumb-item>
+            <a-breadcrumb-item>Editing : Example 1...</a-breadcrumb-item>
           </a-breadcrumb>
-          <a-page-header title="Creating New Category" sub-title="" />
+          <a-page-header
+            title="Editing Commission Task - Example 1"
+            sub-title=""
+          />
         </div>
       </a-col>
     </a-row>
@@ -30,11 +35,12 @@
       >
         <a-card title="Basic Information">
           <a-row :gutter="15">
-            <a-col :span="12">
-              <a-form-item label="Catagorey Name" labelAlign="left" class="mb-1">
+            <a-col :span="14">
+              <a-form-item label="Item Name" labelAlign="left" class="mb-1">
                 <a-input
+                  class=""
                   v-decorator="[
-                    'catagorey_name',
+                    'CommitionTask',
                     {
                       rules: [
                         { required: true, message: 'Please input your note!' },
@@ -42,28 +48,6 @@
                     },
                   ]"
                 />
-              </a-form-item>
-            </a-col>
-            <a-col :span="12">
-              <a-form-item label="Active status" labelAlign="left" class="mb-1">
-                <a-checkbox @change="onChange">
-    
-  </a-checkbox>
-              </a-form-item>
-            </a-col>
-           
-           
-            
-          </a-row>
-        </a-card>
-        <br />
-      
-        <br />
-        <a-card title="Description Details">
-          <a-row :gutter="15">
-            <a-col :span="12">
-              <a-form-item label="Description" labelAlign="left" class="mb-0">
-                <a-textarea :auto-size="{ minRows: 4, maxRows: 6 }" />
               </a-form-item>
             </a-col>
           </a-row>
@@ -77,7 +61,7 @@
         }"
       >
         <a-form-item :wrapper-col="{ span: 24 }" class="text-right mb-0">
-          <a-button type="primary" html-type="submit"> Submit </a-button>
+          <a-button type="primary" html-type="submit"> Update </a-button>
           <a-button
             type="danger"
             html-type="reset"
@@ -104,17 +88,17 @@ export default {
         },
         {
           path: "first",
-          breadcrumbName: "Catagorey",
+          breadcrumbName: "CommitionTask",
         },
         {
           path: "second",
-          breadcrumbName: "Creating",
+          breadcrumbName: "Editing",
         },
       ],
     };
   },
   methods: {
-     onChange(e) {
+    onChange(e) {
       alert(`checked = ${e.target.checked}`);
     },
     handleSubmit(e) {

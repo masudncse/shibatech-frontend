@@ -139,7 +139,6 @@ const columns = [
     dataIndex: "name",
     key: "name",
     sorter: true,
-    width: "20%",
     scopedSlots: { customRender: "City name" },
   },
 
@@ -147,7 +146,6 @@ const columns = [
     title: "Sale order",
     dataIndex: "sale",
     key: "sale",
-    width: "10%",
     scopedSlots: { customRender: " Sale Order" },
   },
   {
@@ -197,7 +195,6 @@ const columns = [
     title: "Active Status",
     dataIndex: "",
     key: "x",
-    width: "10%",
     scopedSlots: { customRender: "Active Status" },
   },
   {
@@ -212,9 +209,9 @@ const columns = [
 const data = [
   {
     id: "1",
-    name: "peoject1",
-    sale: "sale_one",
-    Recurring: "example",
+    name: "Project 1",
+    sale: "Sale 1",
+    Recurring: "Recurring 1",
     payment: "300",
     start: "6",
     end: "6",
@@ -223,20 +220,9 @@ const data = [
   },
   {
     id: "2",
-    name: "peoject1",
-    sale: "sale_one",
-    Recurring: "example",
-    payment: "300",
-    start: "6",
-    end: "6",
-    last: "6-7-2020",
-    dur: "7-6-2021",
-  },
-  {
-    id: "3",
-    name: "peoject1",
-    sale: "sale_one",
-    Recurring: "example",
+    name: "Project 2",
+    sale: "Sale 2",
+    Recurring: "Recurring 2",
     payment: "300",
     start: "6",
     end: "6",

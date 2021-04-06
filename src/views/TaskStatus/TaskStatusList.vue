@@ -133,16 +133,7 @@ const columns = [
     dataIndex: "name",
     key: "name",
     sorter: true,
-    width: "20%",
     scopedSlots: { customRender: "Task  Status" },
-  },
-
-  {
-    title: "Sort Order",
-    dataIndex: "Sort",
-    key: "sort",
-    width: "10%",
-    scopedSlots: { customRender: "Sort Order" },
   },
   {
     title: " Color ",
@@ -151,12 +142,10 @@ const columns = [
     sorter: true,
     scopedSlots: { customRender: "Color" },
   },
-
   {
     title: "Active Status",
     dataIndex: "",
     key: "x",
-    width: "10%",
     scopedSlots: { customRender: "Active Status" },
   },
   {
@@ -171,21 +160,13 @@ const columns = [
 const data = [
   {
     id: "1",
-    name: "Active",
-    Sort: "Example Sort Order",
+    name: "Status 1",
     Color: "Blue",
   },
   {
     id: "2",
-    name: "Processing",
-    Sort: "Example Sort Order",
-    Color: "red",
-  },
-  {
-    id: "3",
-    name: "Unactive",
-    Sort: "Example Sort Order",
-    Color: "Green",
+    name: "Status 2",
+    Color: "Red",
   },
 ];
 

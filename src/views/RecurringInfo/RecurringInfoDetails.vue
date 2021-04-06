@@ -29,7 +29,7 @@
               <a-icon type="deployment-unit" />
             </div>
             <div class="info-block__info">
-              <h5>Project One</h5>
+              <h5>Project 1</h5>
 
               <a
                 href="http://google.com"
@@ -122,26 +122,26 @@
           <a-row :gutter="15">
             <a-col :span="12">
               <a-form-item label="Project Name" labelAlign="left" class="mb-1">
-                Project one
+                Project 1
               </a-form-item>
             </a-col>
             <a-col :span="12">
               <a-form-item label="Sale order" labelAlign="left" class="mb-1">
-                Order One
+                Order 1
               </a-form-item>
             </a-col>
             <a-col :span="12">
               <a-form-item
-                label="Recurring frequency Name"
+                label="Recurring Frequency Name"
                 labelAlign="left"
                 class="mb-1"
               >
-                Example
+                Recurring 1
               </a-form-item>
             </a-col>
             <a-col :span="12">
               <a-form-item
-                label="Recurring frequency Name"
+                label="Recurring Frequency Name"
                 labelAlign="left"
                 class="mb-1"
               >

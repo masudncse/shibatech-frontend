@@ -9,7 +9,7 @@
               >Task Priorities</router-link
             ></a-breadcrumb-item
           >
-          <a-breadcrumb-item>95%</a-breadcrumb-item>
+          <a-breadcrumb-item>Pririty 1</a-breadcrumb-item>
         </a-breadcrumb>
       </a-col>
     </a-row>
@@ -29,7 +29,7 @@
               <a-icon type="deployment-unit" />
             </div>
             <div class="info-block__info">
-              <h5>Task Pririty</h5>
+              <h5>Pririty 1</h5>
 
               <a
                 href="http://google.com"
@@ -122,12 +122,12 @@
           <a-row :gutter="15">
             <a-col :span="12">
               <a-form-item label=" Progress" labelAlign="left" class="mb-1">
-                New Task Pririty
+                Pririty 1
               </a-form-item>
             </a-col>
             <a-col :span="12">
               <a-form-item label="Sort Order" labelAlign="left" class="mb-1">
-                EXample Sort Order
+                5
               </a-form-item>
             </a-col>
             <a-col :span="12">
@@ -143,12 +143,6 @@
             <a-col :span="12">
               <a-form-item label="Created Time" labelAlign="left" class="mb-1">
                 2021-01-27 04:03 AM
-              </a-form-item>
-            </a-col>
-
-            <a-col :span="12">
-              <a-form-item label="Website" labelAlign="left" class="mb-1">
-                http://google.com
               </a-form-item>
             </a-col>
             <a-col :span="12">

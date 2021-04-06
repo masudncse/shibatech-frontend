@@ -146,15 +146,11 @@ const columns = [
 const data = [
   {
     id: "1",
-    name: "Admin",
+    name: "Role 1",
   },
   {
     id: "2",
-    name: "Editor",
-  },
-  {
-    id: "3",
-    name: "Manager",
+    name: "Role 2",
   },
 ];
 

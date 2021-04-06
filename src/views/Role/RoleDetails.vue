@@ -7,7 +7,7 @@
           <a-breadcrumb-item
             ><router-link to="/roles">Roles</router-link></a-breadcrumb-item
           >
-          <a-breadcrumb-item>Editor</a-breadcrumb-item>
+          <a-breadcrumb-item>Role 1</a-breadcrumb-item>
         </a-breadcrumb>
       </a-col>
     </a-row>
@@ -27,7 +27,7 @@
               <a-icon type="user" />
             </div>
             <div class="info-block__info">
-              <h5>Editor</h5>
+              <h5>Role 1</h5>
               <a
                 href="mailto:masud.ncse@gmail.com"
                 class="text-black-50 d-block"
@@ -117,7 +117,7 @@
           <a-row :gutter="15">
             <a-col :span="12">
               <a-form-item label="Role Name" labelAlign="left" class="mb-1">
-                Editor
+                Role 1
               </a-form-item>
             </a-col>
             <a-col :span="12">

@@ -54,84 +54,96 @@
 
             <a-col :span="12">
               <a-form-item label="Category" labelAlign="left" class="mb-0">
-                <a-select
-                  show-search
-                  :value="value"
-                  placeholder="Search your Category"
-                  style="width: 100%"
-                  :default-active-first-option="false"
-                  :show-arrow="false"
-                  :filter-option="false"
-                  :not-found-content="null"
-                  @search="handleSearch"
-                  @change="handleChange"
-                >
-                  <a-select-option v-for="d in data" :key="d.value">
-                    {{ d.text }}
-                  </a-select-option>
-                </a-select>
+                <a-input-group compact>
+                  <a-select
+                    show-search
+                    :value="value"
+                    placeholder="Select a category"
+                    style="width: 85%"
+                    :default-active-first-option="false"
+                    :show-arrow="false"
+                    :filter-option="false"
+                    :not-found-content="null"
+                    @search="handleSearch"
+                    @change="handleChange"
+                  >
+                    <a-select-option v-for="d in data" :key="d.value">
+                      {{ d.text }}
+                    </a-select-option>
+                  </a-select>
+                  <a-button style="width: 15%" icon="plus" />
+                </a-input-group>
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="Minufecture" labelAlign="left" class="mb-0">
-                <a-select
-                  show-search
-                  :value="value"
-                  placeholder="Search your Minufecture"
-                  style="width: 100%"
-                  :default-active-first-option="false"
-                  :show-arrow="false"
-                  :filter-option="false"
-                  :not-found-content="null"
-                  @search="handleSearch"
-                  @change="handleChange"
-                >
-                  <a-select-option v-for="d in data" :key="d.value">
-                    {{ d.text }}
-                  </a-select-option>
-                </a-select>
+              <a-form-item label="Manufacture" labelAlign="left" class="mb-0">
+                <a-input-group compact>
+                  <a-select
+                    show-search
+                    :value="value"
+                    placeholder="Select a manufacture"
+                    style="width: 85%"
+                    :default-active-first-option="false"
+                    :show-arrow="false"
+                    :filter-option="false"
+                    :not-found-content="null"
+                    @search="handleSearch"
+                    @change="handleChange"
+                  >
+                    <a-select-option v-for="d in data" :key="d.value">
+                      {{ d.text }}
+                    </a-select-option>
+                  </a-select>
+                  <a-button style="width: 15%" icon="plus" />
+                </a-input-group>
               </a-form-item>
             </a-col>
 
             <a-col :span="12">
               <a-form-item label="Vendor" labelAlign="left" class="mb-0">
-                <a-select
-                  show-search
-                  :value="value"
-                  placeholder="Search your Vendor"
-                  style="width: 100%"
-                  :default-active-first-option="false"
-                  :show-arrow="false"
-                  :filter-option="false"
-                  :not-found-content="null"
-                  @search="handleSearch"
-                  @change="handleChange"
-                >
-                  <a-select-option v-for="d in data" :key="d.value">
-                    {{ d.text }}
-                  </a-select-option>
-                </a-select>
+                <a-input-group compact>
+                  <a-select
+                    show-search
+                    :value="value"
+                    placeholder="Select a vendor"
+                    style="width: 85%"
+                    :default-active-first-option="false"
+                    :show-arrow="false"
+                    :filter-option="false"
+                    :not-found-content="null"
+                    @search="handleSearch"
+                    @change="handleChange"
+                  >
+                    <a-select-option v-for="d in data" :key="d.value">
+                      {{ d.text }}
+                    </a-select-option>
+                  </a-select>
+                  <a-button style="width: 15%" icon="plus" />
+                </a-input-group>
               </a-form-item>
             </a-col>
 
             <a-col :span="12">
               <a-form-item label="Unit" labelAlign="left" class="mb-0">
-                <a-select
-                  show-search
-                  :value="value"
-                  placeholder="Search your Unit"
-                  style="width: 100%"
-                  :default-active-first-option="false"
-                  :show-arrow="false"
-                  :filter-option="false"
-                  :not-found-content="null"
-                  @search="handleSearch"
-                  @change="handleChange"
-                >
-                  <a-select-option v-for="d in data" :key="d.value">
-                    {{ d.text }}
-                  </a-select-option>
-                </a-select>
+                <a-input-group compact>
+                  <a-select
+                    show-search
+                    :value="value"
+                    placeholder="Select a unit"
+                    style="width: 85%"
+                    :default-active-first-option="false"
+                    :show-arrow="false"
+                    :filter-option="false"
+                    :not-found-content="null"
+                    @search="handleSearch"
+                    @change="handleChange"
+                  >
+                    <a-select-option v-for="d in data" :key="d.value">
+                      {{ d.text }}
+                    </a-select-option>
+                  </a-select>
+                  <a-button style="width: 15%" icon="plus" />
+                </a-input-group>
               </a-form-item>
             </a-col>
             <a-col :span="12">

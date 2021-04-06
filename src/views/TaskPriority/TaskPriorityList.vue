@@ -160,21 +160,13 @@ const columns = [
 const data = [
   {
     id: "1",
-    name: "New Task  Pririty",
-    Sort: "Example Sort Order",
+    name: "Pririty 1",
     Color: "Blue",
   },
   {
     id: "2",
-    name: "New  Task Pririty",
-    Sort: "Example Sort Order",
-    Color: "red",
-  },
-  {
-    id: "3",
-    name: "New  Task Pririty",
-    Sort: "Example Sort Order",
-    Color: "Green",
+    name: "Pririty 2",
+    Color: "Red",
   },
 ];
 

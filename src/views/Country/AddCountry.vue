@@ -53,9 +53,15 @@
             </a-col>
           </a-row>
         </a-card>
-        <br />
+      </a-layout-content>
 
-        <br />
+      <a-layout-content
+        :style="{
+          background: '#fff',
+          padding: '24px',
+          marginTop: '15px',
+        }"
+      >
         <a-card title="Description Details">
           <a-row :gutter="15">
             <a-col :span="12">

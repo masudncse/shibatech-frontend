@@ -5,7 +5,9 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/organizations">Organizations</router-link></a-breadcrumb-item
+            ><router-link to="/organizations"
+              >Organizations</router-link
+            ></a-breadcrumb-item
           >
           <a-breadcrumb-item>All</a-breadcrumb-item>
         </a-breadcrumb>
@@ -96,6 +98,8 @@
         <span slot="name" slot-scope="text">{{ text }}</span>
         <a slot="phone" slot-scope="text">{{ text }}</a>
         <a slot="email" slot-scope="text">{{ text }}</a>
+        <a slot="website" slot-scope="text">{{ text }}</a>
+        <a slot="updated_at" slot-scope="text">{{ text }}</a>
         <div slot="action" slot-scope="text, record">
           <a-button-group>
             <a-popconfirm
@@ -130,7 +134,6 @@ const columns = [
     dataIndex: "name",
     key: "name",
     sorter: true,
-    width: "20%",
     scopedSlots: { customRender: "name" },
   },
   {
@@ -148,6 +151,20 @@ const columns = [
     scopedSlots: { customRender: "email" },
   },
   {
+    title: "Website",
+    dataIndex: "website",
+    key: "website",
+    sorter: true,
+    scopedSlots: { customRender: "website" },
+  },
+  {
+    title: "Modified At",
+    dataIndex: "updated_at",
+    key: "updated_at",
+    sorter: true,
+    scopedSlots: { customRender: "updated_at" },
+  },
+  {
     title: "Action",
     dataIndex: "",
     key: "x",
@@ -159,21 +176,26 @@ const columns = [
 const data = [
   {
     id: "1",
-    name: "John Brown",
+    name: " Organization 1",
     phone: "01676717945",
     email: "example@gmail.com",
+    website: "google.com",
+    updated_at: "05 Jun, 2020",
   },
   {
     id: "2",
-    name: "Jim Green",
+    name: " Organization 2",
     phone: "01676717945",
     email: "example@gmail.com",
+    website: "facebook.com",
+    updated_at: "03 Feb, 2020",
   },
   {
     id: "3",
-    name: "Joe Black",
+    name: " Organization 3",
     phone: "01676717945",
     email: "example@gmail.com",
+    updated_at: "01 May, 2020",
   },
 ];
 

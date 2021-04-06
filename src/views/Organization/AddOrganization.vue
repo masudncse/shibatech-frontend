@@ -62,7 +62,7 @@
             </a-col>
             <a-col :span="12">
               <a-form-item
-                label="Secondary Phone 	"
+                label="Secondary Phone"
                 labelAlign="left"
                 class="mb-0"
               >
@@ -70,13 +70,18 @@
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="Employees 	" labelAlign="left" class="mb-0">
+              <a-form-item label="Employees" labelAlign="left" class="mb-0">
+                <a-input />
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Primary Email" labelAlign="left" class="mb-0">
                 <a-input />
               </a-form-item>
             </a-col>
             <a-col :span="12">
               <a-form-item
-                label="Primary Email 		"
+                label="Secondary Email"
                 labelAlign="left"
                 class="mb-0"
               >
@@ -84,22 +89,13 @@
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item
-                label="Secondary Email 	"
-                labelAlign="left"
-                class="mb-0"
-              >
+              <a-form-item label="Ownership" labelAlign="left" class="mb-0">
                 <a-input />
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item label="Ownership " labelAlign="left" class="mb-0">
-                <a-input />
-              </a-form-item>
-            </a-col>
-            <a-col :span="12">
-              <a-form-item label="Industry " labelAlign="left" class="mb-0">
-                <a-select default-value="Banking" style="width: 120px">
+              <a-form-item label="Industry" labelAlign="left" class="mb-0">
+                <a-select default-value="Banking" style="width: 100%">
                   <a-select-option value="Banking"> Banking </a-select-option>
                   <a-select-option value="Biotechnology">
                     Biotechnology
@@ -115,7 +111,7 @@
             </a-col>
             <a-col :span="12">
               <a-form-item label="Rating " labelAlign="left" class="mb-0">
-                <a-select default-value="Active" style="width: 120px">
+                <a-select default-value="Active" style="width: 100%">
                   <a-select-option value="Acquired"> Acquired </a-select-option>
                   <a-select-option value="Active"> Active </a-select-option>
                   <a-select-option value="Market Failed">
@@ -148,7 +144,15 @@
             </a-col>
           </a-row>
         </a-card>
-        <br />
+      </a-layout-content>
+
+      <a-layout-content
+        :style="{
+          background: '#fff',
+          padding: '24px',
+          marginTop: '15px',
+        }"
+      >
         <a-card title="Address Details">
           <a-row :gutter="15">
             <a-col :span="24">
@@ -187,7 +191,15 @@
             </a-col>
           </a-row>
         </a-card>
-        <br />
+      </a-layout-content>
+
+      <a-layout-content
+        :style="{
+          background: '#fff',
+          padding: '24px',
+          marginTop: '15px',
+        }"
+      >
         <a-card title="Description Details">
           <a-row :gutter="15">
             <a-col :span="12">
@@ -198,6 +210,7 @@
           </a-row>
         </a-card>
       </a-layout-content>
+      
       <a-layout-content
         :style="{
           background: '#fff',

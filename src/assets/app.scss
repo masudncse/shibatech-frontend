@@ -41,6 +41,14 @@ html {
   list-style: none;
   font-feature-settings: "tnum";
   font-family: "Lato", sans-serif !important;
+  margin-bottom: 0;
+
+  td,
+  th {
+    /* border: none; */
+    padding: 1rem;
+    overflow-wrap: break-word;
+  }
 
   thead {
     background: #fafafa;
@@ -53,12 +61,23 @@ html {
       line-height: 21px;
     }
   }
-  td,
-  th {
-    border: none;
-    padding: 16px 16px;
-    overflow-wrap: break-word;
+
+  tbody {
+    /* tr {
+      transition: background 0.3s ease;
+      &:hover {
+        background-color: #e6f7ff;
+      }
+    }
+    td {
+      border-bottom: 1px solid #e8e8e8;
+      transition: background 0.3s;
+      font-weight: 400;
+    } */
   }
+}
+
+.table-hovered {
   tbody {
     tr {
       transition: background 0.3s ease;
@@ -74,12 +93,37 @@ html {
   }
 }
 
+.table-condensed {
+  td,
+  th {
+    padding: 0.65rem;
+  }
+}
+
+.ant-input-group {
+  button {
+    i {
+      color: #6c757d;
+    }
+  }
+
+  .ant-btn-icon-only > i {
+    line-height: normal !important;
+    vertical-align: auto !important;
+  }
+}
+
 .page--title {
   padding: 16px 0 16px 0 !important;
 
   .ant-page-header {
     padding: 8px 0 0 0;
   }
+}
+
+.status-menu .ant-menu-item,
+.status-menu .ant-menu-submenu-title {
+  padding: 0 35px;
 }
 
 .info-block {

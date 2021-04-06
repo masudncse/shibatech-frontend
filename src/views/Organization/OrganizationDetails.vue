@@ -9,7 +9,7 @@
               >Organizations</router-link
             ></a-breadcrumb-item
           >
-          <a-breadcrumb-item>ABC Company</a-breadcrumb-item>
+          <a-breadcrumb-item> Organization 1</a-breadcrumb-item>
         </a-breadcrumb>
       </a-col>
     </a-row>
@@ -29,7 +29,7 @@
               <a-icon type="user" />
             </div>
             <div class="info-block__info">
-              <h5>ABC Company</h5>
+              <h5>Organization 1</h5>
               <a
                 href="mailto:masud.ncse@gmail.com"
                 class="text-black-50 d-block"
@@ -134,7 +134,7 @@
                 labelAlign="left"
                 class="mb-1"
               >
-                ABC Company
+                Organization 1
               </a-form-item>
             </a-col>
             <a-col :span="12">
@@ -239,7 +239,7 @@
             </a-col>
             <a-col :span="12">
               <a-form-item label="Country" labelAlign="left" class="mb-1">
-               Bangladesh
+                Bangladesh
               </a-form-item>
             </a-col>
           </a-row>

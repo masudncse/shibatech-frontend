@@ -131,15 +131,7 @@ const columns = [
     dataIndex: "name",
     key: "name",
     sorter: true,
-    width: "20%",
     scopedSlots: { customRender: "name" },
-  },
-  {
-    title: "Active Status",
-    dataIndex: "",
-    key: "x",
-    width: "10%",
-    scopedSlots: { customRender: "Active Status" },
   },
   {
     title: "Country Discription ",
@@ -148,7 +140,12 @@ const columns = [
     sorter: true,
     scopedSlots: { customRender: "Country Discription" },
   },
-
+  {
+    title: "Active Status",
+    dataIndex: "",
+    key: "x",
+    scopedSlots: { customRender: "Active Status" },
+  },
   {
     title: "Action",
     dataIndex: "",
@@ -161,21 +158,13 @@ const columns = [
 const data = [
   {
     id: "1",
-    name: "France",
-    Discription:
-      "Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte",
+    name: "Country 1",
+    Discription: "Lorem ipsum dolor sit amet, consecte",
   },
   {
     id: "2",
-    name: "Japan",
-    Discription:
-      "Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte",
-  },
-  {
-    id: "3",
-    name: "Chaina",
-    Discription:
-      "Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet, consecte",
+    name: "Country 2",
+    Discription: "Lorem ipsum dolor sit.",
   },
 ];
 

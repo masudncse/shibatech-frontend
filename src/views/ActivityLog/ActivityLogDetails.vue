@@ -1,15 +1,15 @@
 <template>
-  <div class="vendor-details">
+  <div class="State-details">
     <a-row>
       <a-col :span="24">
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/company-info"
-              >Company Info</router-link
+            ><router-link to="/activity-logs"
+              >Activity Logs</router-link
             ></a-breadcrumb-item
           >
-          <a-breadcrumb-item>ABC Company</a-breadcrumb-item>
+          <a-breadcrumb-item>Example Log 1</a-breadcrumb-item>
         </a-breadcrumb>
       </a-col>
     </a-row>
@@ -26,18 +26,11 @@
         <a-col :span="12">
           <div class="info-block">
             <div class="info-block__icon">
-              <a-icon type="user" />
+              <a-icon type="deployment-unit" />
             </div>
             <div class="info-block__info">
-              <h5>ABC Company</h5>
-              <a
-                href="mailto:masud.ncse@gmail.com"
-                class="text-black-50 d-block"
-                >masud.ncse@gmail.com</a
-              >
-              <a href="tel:01676717945" class="text-black-50 d-block"
-                >01676717945</a
-              >
+              <h5>Example Log 1</h5>
+
               <a
                 href="http://google.com"
                 target="_blank"
@@ -49,9 +42,23 @@
         </a-col>
         <a-col :span="12" align="end">
           <div class="mb-2"></div>
-          <a-button @click="$router.push('/company-info/edit')"
-            >Edit Info</a-button
-          >
+
+          <a-button class="ml-2">Send Email</a-button>
+          <a-dropdown>
+            <a-menu slot="overlay">
+              <a-menu-item key="1"> Delete recurirnginfos </a-menu-item>
+              <a-menu-item key="2"> Duplicate </a-menu-item>
+            </a-menu>
+            <a-button class="ml-2"> More <a-icon type="down" /> </a-button>
+          </a-dropdown>
+          <a-button-group class="ml-2">
+            <a-button>
+              <a-icon type="left" />
+            </a-button>
+            <a-button>
+              <a-icon type="right" />
+            </a-button>
+          </a-button-group>
         </a-col>
       </a-row>
     </a-layout-content>
@@ -103,68 +110,66 @@
       }"
     >
       <a-form :form="form" :label-col="{ span: 6 }" :wrapper-col="{ span: 12 }">
-        <a-card title="Company Logo">
+        <a-card title="Basic Information">
           <a-row :gutter="15">
-            <a-col :span="24">
-              <img src="http://www.jpremit.com/images/logo.png" alt="" />
+            <a-col :span="12">
+              <a-form-item label="Log Name" labelAlign="left" class="mb-1">
+                Log Name
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Discription" labelAlign="left" class="mb-1">
+                Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor sit amet,
+                consecte Lorem ipsum dolor sit amet, consecte Lorem ipsum dolor
+                sit amet, consecte
+              </a-form-item>
+            </a-col>
+
+            <a-col :span="12">
+              <a-form-item label="Subject" labelAlign="left" class="mb-1">
+                Example Subject
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Subject Type" labelAlign="left" class="mb-1">
+                Example Subject Type
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Causer" labelAlign="left" class="mb-1">
+                Example Causer 6
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Causer Type " labelAlign="left" class="mb-1">
+                Example Causer Type
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label=" Properties " labelAlign="left" class="mb-1">
+                Example Properties
+              </a-form-item>
+            </a-col>
+
+            <a-col :span="12">
+              <a-form-item label="Created Time" labelAlign="left" class="mb-1">
+                2021-01-27 04:03 AM
+              </a-form-item>
+            </a-col>
+
+            <a-col :span="12">
+              <a-form-item label="Website" labelAlign="left" class="mb-1">
+                http://google.com
+              </a-form-item>
+            </a-col>
+            <a-col :span="12">
+              <a-form-item label="Modified Time" labelAlign="left" class="mb-1">
+                2021-01-27 04:03 AM
+              </a-form-item>
             </a-col>
           </a-row>
         </a-card>
         <br />
-        <a-card title="Company Information">
-          <a-row :gutter="15">
-            <a-col :span="24">
-              <a-form-item label="Company Name" labelAlign="left" class="mb-2">
-                ABC Company
-              </a-form-item>
-            </a-col>
-            <a-col :span="24">
-              <a-form-item label="Address" labelAlign="left" class="mb-2">
-                24, Gulshan Bonani
-              </a-form-item>
-            </a-col>
-            <a-col :span="24">
-              <a-form-item label="City" labelAlign="left" class="mb-2">
-                Dhaka
-              </a-form-item>
-            </a-col>
-            <a-col :span="24">
-              <a-form-item label="State" labelAlign="left" class="mb-2">
-                Dhaka
-              </a-form-item>
-            </a-col>
-            <a-col :span="24">
-              <a-form-item label="Postal Code	" labelAlign="left" class="mb-2">
-                1100
-              </a-form-item>
-            </a-col>
-            <a-col :span="24">
-              <a-form-item label="Country" labelAlign="left" class="mb-2">
-                Bangladesh
-              </a-form-item>
-            </a-col>
-            <a-col :span="24">
-              <a-form-item label="Phone" labelAlign="left" class="mb-2">
-                +8801676717945
-              </a-form-item>
-            </a-col>
-            <a-col :span="24">
-              <a-form-item label="Fax" labelAlign="left" class="mb-2">
-                +029588952
-              </a-form-item>
-            </a-col>
-            <a-col :span="24">
-              <a-form-item label="Website" labelAlign="left" class="mb-2">
-                http://example.com
-              </a-form-item>
-            </a-col>
-            <a-col :span="24">
-              <a-form-item label="VAT ID	" labelAlign="left" class="mb-2">
-                3241567456145
-              </a-form-item>
-            </a-col>
-          </a-row>
-        </a-card>
       </a-form>
     </a-layout-content>
   </div>
@@ -185,11 +190,11 @@ export default {
         },
         {
           path: "first",
-          breadcrumbName: "Vendors",
+          breadcrumbName: "Activity Log",
         },
         {
           path: "second",
-          breadcrumbName: "Md. Masudul Kabir",
+          breadcrumbName: "Log Name",
         },
       ],
     };

@@ -135,13 +135,6 @@ const columns = [
     sorter: true,
     scopedSlots: { customRender: "Quote Stages" },
   },
-
-  {
-    title: "Sort Order",
-    dataIndex: "Sort",
-    key: "sort",
-    scopedSlots: { customRender: "Sort Order" },
-  },
   {
     title: " Color ",
     dataIndex: "Color",
@@ -169,21 +162,14 @@ const data = [
   {
     id: "1",
     name: "Stage 1",
-    Sort: "Example Sort Order",
     Color: "Blue",
   },
   {
     id: "2",
     name: "Stage 2",
-    Sort: "Example Sort Order",
-    Color: "red",
+    Color: "Red",
   },
-  {
-    id: "3",
-    name: "Stage 3",
-    Sort: "Example Sort Order",
-    Color: "Green",
-  },
+
 ];
 
 export default {

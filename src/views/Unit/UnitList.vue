@@ -128,14 +128,12 @@ const columns = [
     dataIndex: "name",
     key: "name",
     sorter: true,
-    width: "20%",
     scopedSlots: { customRender: "name" },
   },
   {
     title: "Active Status",
     dataIndex: "",
     key: "x",
-    width: "10%",
     scopedSlots: { customRender: "Active Status" },
   },
   {
@@ -150,19 +148,11 @@ const columns = [
 const data = [
   {
     id: "1",
-    name: "Unit A",
+    name: "Unit 1",
   },
   {
     id: "2",
-    name: "Unit B",
-  },
-  {
-    id: "3",
-    name: "Unit C",
-  },
-  {
-    id: "3",
-    name: "Unit D",
+    name: "Unit 2",
   },
 ];
 

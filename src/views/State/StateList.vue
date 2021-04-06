@@ -5,9 +5,7 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/states"
-              >States</router-link
-            ></a-breadcrumb-item
+            ><router-link to="/states">States</router-link></a-breadcrumb-item
           >
           <a-breadcrumb-item>All</a-breadcrumb-item>
         </a-breadcrumb>
@@ -127,26 +125,24 @@ import reqwest from "reqwest";
 
 const columns = [
   {
-    title: "States Name ",
+    title: "States Name",
     dataIndex: "name",
     key: "name",
     sorter: true,
-    width: "20%",
     scopedSlots: { customRender: "State name" },
+  },
+  {
+    title: "Country Name ",
+    dataIndex: "Country",
+    key: "country",
+    sorter: true,
+    scopedSlots: { customRender: "Country Name" },
   },
   {
     title: "Active Status",
     dataIndex: "",
     key: "x",
-    width: "10%",
     scopedSlots: { customRender: "Active Status" },
-  },
-  {
-    title: "Country name ",
-    dataIndex: "Country",
-    key: "country",
-    sorter: true,
-    scopedSlots: { customRender: "Country Name" },
   },
   {
     title: "Action",
@@ -160,18 +156,13 @@ const columns = [
 const data = [
   {
     id: "1",
-    name: "mosko",
-    Country: "France",
+    name: "State 1",
+    Country: "Country 1",
   },
   {
     id: "2",
-    name: "Tokewoo",
-    Country: "Japan",
-  },
-  {
-    id: "3",
-    name: "Byjing",
-    Country: "Chaina",
+    name: "State 2",
+    Country: "Country 2",
   },
 ];
 

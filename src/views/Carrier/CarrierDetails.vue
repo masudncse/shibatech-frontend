@@ -9,7 +9,7 @@
               >Carriers</router-link
             ></a-breadcrumb-item
           >
-          <a-breadcrumb-item>DHL</a-breadcrumb-item>
+          <a-breadcrumb-item>Carrier 1</a-breadcrumb-item>
         </a-breadcrumb>
       </a-col>
     </a-row>
@@ -29,7 +29,7 @@
               <a-icon type="car" />
             </div>
             <div class="info-block__info">
-              <h5>DHL</h5>
+              <h5>Carrier 1</h5>
 
               <a
                 href="http://google.com"
@@ -120,7 +120,7 @@
           <a-row :gutter="15">
             <a-col :span="12">
               <a-form-item label=" Task Status" labelAlign="left" class="mb-1">
-                Example
+                Carrier 1
               </a-form-item>
             </a-col>
 
@@ -132,12 +132,6 @@
             <a-col :span="12">
               <a-form-item label="Created Time" labelAlign="left" class="mb-1">
                 2021-01-27 04:03 AM
-              </a-form-item>
-            </a-col>
-
-            <a-col :span="12">
-              <a-form-item label="Website" labelAlign="left" class="mb-1">
-                http://google.com
               </a-form-item>
             </a-col>
             <a-col :span="12">

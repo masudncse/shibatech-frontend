@@ -145,7 +145,7 @@
                     },
                   ]"
                   default-value="lucy"
-                  style="width: 120px"
+                  style="width: 100%"
                 >
                   <a-select-option value="jack"> Admin </a-select-option>
                   <a-select-option value="Yiminghe"> Manager </a-select-option>
@@ -155,7 +155,15 @@
             </a-col>
           </a-row>
         </a-card>
-        <br />
+      </a-layout-content>
+
+      <a-layout-content
+        :style="{
+          background: '#fff',
+          padding: '24px',
+          marginTop: '15px',
+        }"
+      >
         <a-card title="More Information">
           <a-row :gutter="15">
             <a-col :span="12">
@@ -227,7 +235,15 @@
             </a-col>
           </a-row>
         </a-card>
-        <br />
+      </a-layout-content>
+
+      <a-layout-content
+        :style="{
+          background: '#fff',
+          padding: '24px',
+          marginTop: '15px',
+        }"
+      >
         <a-card title="Address Information">
           <a-row :gutter="15">
             <a-col :span="24">
@@ -266,7 +282,15 @@
             </a-col>
           </a-row>
         </a-card>
-        <br />
+      </a-layout-content>
+
+      <a-layout-content
+        :style="{
+          background: '#fff',
+          padding: '24px',
+          marginTop: '15px',
+        }"
+      >
         <a-card title="User Photograph">
           <a-row :gutter="15">
             <a-col :span="12">
@@ -285,7 +309,15 @@
             </a-col>
           </a-row>
         </a-card>
-        <br />
+      </a-layout-content>
+
+      <a-layout-content
+        :style="{
+          background: '#fff',
+          padding: '24px',
+          marginTop: '15px',
+        }"
+      >
         <a-card title="Description Details">
           <a-row :gutter="15">
             <a-col :span="12">
@@ -296,6 +328,7 @@
           </a-row>
         </a-card>
       </a-layout-content>
+
       <a-layout-content
         :style="{
           background: '#fff',

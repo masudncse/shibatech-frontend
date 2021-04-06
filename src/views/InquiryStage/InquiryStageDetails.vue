@@ -5,7 +5,9 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/inquiry-stages">Inquiry Stages</router-link></a-breadcrumb-item
+            ><router-link to="/inquiry-stages"
+              >Inquiry Stages</router-link
+            ></a-breadcrumb-item
           >
           <a-breadcrumb-item>Stage 1 </a-breadcrumb-item>
         </a-breadcrumb>
@@ -25,11 +27,10 @@
           <div class="info-block">
             <div class="info-block__icon">
               <a-icon type="deployment-unit" />
-              
             </div>
             <div class="info-block__info">
               <h5>Stage 1</h5>
-           
+
               <a
                 href="http://google.com"
                 target="_blank"
@@ -47,13 +48,14 @@
             >Add New Item</a-button
           >
           <div class="mb-2"></div>
-          <a-button @click="$router.push('/inquiry-stages/1/edit')">Edit</a-button>
+          <a-button @click="$router.push('/inquiry-stages/1/edit')"
+            >Edit</a-button
+          >
           <a-button class="ml-2">Send Email</a-button>
           <a-dropdown>
             <a-menu slot="overlay">
               <a-menu-item key="1"> Delete InquiryStages </a-menu-item>
               <a-menu-item key="2"> Duplicate </a-menu-item>
-           
             </a-menu>
             <a-button class="ml-2"> More <a-icon type="down" /> </a-button>
           </a-dropdown>
@@ -123,33 +125,24 @@
                 Stage 1
               </a-form-item>
             </a-col>
-                <a-col :span="12">
+            <a-col :span="12">
               <a-form-item label="Sort Order" labelAlign="left" class="mb-1">
-             EXample Sort Order
+                4
               </a-form-item>
             </a-col>
-                <a-col :span="12">
+            <a-col :span="12">
               <a-form-item label="Color" labelAlign="left" class="mb-1">
-             Blue
+                Blue
               </a-form-item>
             </a-col>
-              <a-col :span="12">
+            <a-col :span="12">
               <a-form-item label="Active Status" labelAlign="left" class="mb-1">
-                               <a-checkbox  default-checked>
-    
-  </a-checkbox>
+                <a-checkbox default-checked> </a-checkbox>
               </a-form-item>
             </a-col>
             <a-col :span="12">
               <a-form-item label="Created Time" labelAlign="left" class="mb-1">
                 2021-01-27 04:03 AM
-              </a-form-item>
-            </a-col>
-        
-    
-            <a-col :span="12">
-              <a-form-item label="Website" labelAlign="left" class="mb-1">
-                http://google.com
               </a-form-item>
             </a-col>
             <a-col :span="12">
@@ -160,9 +153,6 @@
           </a-row>
         </a-card>
         <br />
-       
-     
-      
       </a-form>
     </a-layout-content>
   </div>

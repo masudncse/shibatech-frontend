@@ -66,26 +66,32 @@
                 labelAlign="left"
                 class="mb-0"
               >
-                <a-select
-                  default-value="ABC Company"
-                  style="width: 100%"
-                  @change="handleChange"
-                >
-                  <a-select-option value="ABC Company">
-                    ABC Company
-                  </a-select-option>
-                  <a-select-option value="XYZ Company">
-                    XYZ Company
-                  </a-select-option>
-                </a-select>
+                <a-input-group compact>
+                  <a-select
+                    show-search
+                    :value="value"
+                    style="width: 85%"
+                    :default-active-first-option="false"
+                    :show-arrow="false"
+                    :filter-option="false"
+                    :not-found-content="null"
+                    @search="handleSearch"
+                    @change="handleChange"
+                  >
+                    <a-select-option v-for="d in data" :key="d.value">
+                      {{ d.text }}
+                    </a-select-option>
+                  </a-select>
+                  <a-button
+                    style="width: 15%"
+                    icon="plus"
+                    @click.native="$router.push('/organizations/add')"
+                  />
+                </a-input-group>
               </a-form-item>
             </a-col>
             <a-col :span="12">
-              <a-form-item
-                label="Mobile Phone  	"
-                labelAlign="left"
-                class="mb-0"
-              >
+              <a-form-item label="Mobile Phone" labelAlign="left" class="mb-0">
                 <a-input />
               </a-form-item>
             </a-col>
@@ -101,7 +107,7 @@
             </a-col>
             <a-col :span="12">
               <a-form-item
-                label="Secondary Phone "
+                label="Secondary Phone"
                 labelAlign="left"
                 class="mb-0"
               >
@@ -134,7 +140,7 @@
                 labelAlign="left"
                 class="mb-0"
               >
-                <a-date-picker />
+                <a-date-picker style="width: 100%" />
               </a-form-item>
             </a-col>
             <a-col :span="12">
@@ -167,7 +173,15 @@
             </a-col>
           </a-row>
         </a-card>
-        <br />
+      </a-layout-content>
+
+      <a-layout-content
+        :style="{
+          background: '#fff',
+          padding: '24px',
+          marginTop: '15px',
+        }"
+      >
         <a-card title="Address Details">
           <a-row :gutter="15">
             <a-col :span="24">
@@ -206,7 +220,15 @@
             </a-col>
           </a-row>
         </a-card>
-        <br />
+      </a-layout-content>
+
+      <a-layout-content
+        :style="{
+          background: '#fff',
+          padding: '24px',
+          marginTop: '15px',
+        }"
+      >
         <a-card title="Description Details">
           <a-row :gutter="15">
             <a-col :span="12">
@@ -216,7 +238,15 @@
             </a-col>
           </a-row>
         </a-card>
-        <br />
+      </a-layout-content>
+
+      <a-layout-content
+        :style="{
+          background: '#fff',
+          padding: '24px',
+          marginTop: '15px',
+        }"
+      >
         <a-card title="Profile Picture">
           <a-row :gutter="15">
             <a-col :span="12">
@@ -245,6 +275,7 @@
           </a-row>
         </a-card>
       </a-layout-content>
+
       <a-layout-content
         :style="{
           background: '#fff',
@@ -268,14 +299,62 @@
 </template>
 
 <script>
+import jsonp from "fetch-jsonp";
+import querystring from "querystring";
+
+let timeout;
+let currentValue;
+
+function fetch(value, callback) {
+  if (timeout) {
+    clearTimeout(timeout);
+    timeout = null;
+  }
+  currentValue = value;
+
+  function fake() {
+    const str = querystring.encode({
+      code: "utf-8",
+      q: value,
+    });
+    jsonp(`https://suggest.taobao.com/sug?${str}`)
+      .then((response) => response.json())
+      .then((d) => {
+        if (currentValue === value) {
+          const result = d.result;
+          const data = [];
+          result.forEach((r) => {
+            data.push({
+              value: r[0],
+              text: r[0],
+            });
+          });
+          callback(data);
+        }
+      });
+  }
+
+  timeout = setTimeout(fake, 300);
+}
+
 export default {
   data() {
     return {
+      data: [],
+      value: undefined,
       formLayout: "horizontal",
       form: this.$form.createForm(this, { name: "coordinated" }),
     };
   },
   methods: {
+    handleSearch(value) {
+      fetch(value, (data) => (this.data = data));
+    },
+    handleChange(value) {
+      console.log(value);
+      this.value = value;
+      fetch(value, (data) => (this.data = data));
+    },
     handleSubmit(e) {
       e.preventDefault();
       this.form.validateFields((err, values) => {

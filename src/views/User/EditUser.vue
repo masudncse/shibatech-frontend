@@ -148,7 +148,7 @@
                     },
                   ]"
                   default-value="lucy"
-                  style="width: 120px"
+                  style="width: 100% "
                 >
                   <a-select-option value="jack"> Admin </a-select-option>
                   <a-select-option value="Yiminghe"> Manager </a-select-option>

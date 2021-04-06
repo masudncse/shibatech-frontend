@@ -150,20 +150,13 @@ const columns = [
 const data = [
   {
     id: "1",
-    name: "Read Vendors",
+    name: "Permission 1",
   },
   {
     id: "2",
-    name: "Create Vendors",
+    name: "Permission 2",
   },
-  {
-    id: "3",
-    name: "Update Vendors",
-  },
-  {
-    id: "3",
-    name: "Delete Vendors",
-  },
+
 ];
 
 export default {

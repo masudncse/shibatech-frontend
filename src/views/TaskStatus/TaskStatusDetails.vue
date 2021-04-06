@@ -9,7 +9,7 @@
               >Task Statuses</router-link
             ></a-breadcrumb-item
           >
-          <a-breadcrumb-item>Active</a-breadcrumb-item>
+          <a-breadcrumb-item>Status 1</a-breadcrumb-item>
         </a-breadcrumb>
       </a-col>
     </a-row>
@@ -29,7 +29,7 @@
               <a-icon type="deployment-unit" />
             </div>
             <div class="info-block__info">
-              <h5>Active</h5>
+              <h5>Status 1</h5>
 
               <a
                 href="http://google.com"
@@ -122,12 +122,12 @@
           <a-row :gutter="15">
             <a-col :span="12">
               <a-form-item label=" Task Status" labelAlign="left" class="mb-1">
-                Active
+                Status 1
               </a-form-item>
             </a-col>
             <a-col :span="12">
               <a-form-item label="Sort Order" labelAlign="left" class="mb-1">
-                EXample Sort Order
+                3
               </a-form-item>
             </a-col>
             <a-col :span="12">
@@ -143,12 +143,6 @@
             <a-col :span="12">
               <a-form-item label="Created Time" labelAlign="left" class="mb-1">
                 2021-01-27 04:03 AM
-              </a-form-item>
-            </a-col>
-
-            <a-col :span="12">
-              <a-form-item label="Website" labelAlign="left" class="mb-1">
-                http://google.com
               </a-form-item>
             </a-col>
             <a-col :span="12">

@@ -159,19 +159,13 @@ const columns = [
 const data = [
   {
     id: "1",
-    name: "John Brown",
+    name: "Vendor 1",
     phone: "01676717945",
     email: "example@gmail.com",
   },
   {
     id: "2",
-    name: "Jim Green",
-    phone: "01676717945",
-    email: "example@gmail.com",
-  },
-  {
-    id: "3",
-    name: "Joe Black",
+    name: "Vendor 2",
     phone: "01676717945",
     email: "example@gmail.com",
   },

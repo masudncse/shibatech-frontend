@@ -5,9 +5,7 @@
         <a-breadcrumb class="page--title">
           <a-breadcrumb-item>Home</a-breadcrumb-item>
           <a-breadcrumb-item
-            ><router-link to="/cities"
-              >Cities</router-link
-            ></a-breadcrumb-item
+            ><router-link to="/cities">Cities</router-link></a-breadcrumb-item
           >
           <a-breadcrumb-item>All</a-breadcrumb-item>
         </a-breadcrumb>
@@ -133,29 +131,26 @@ const columns = [
     dataIndex: "name",
     key: "name",
     sorter: true,
-    width: "20%",
     scopedSlots: { customRender: "City name" },
+  },
+  {
+    title: "State Name",
+    dataIndex: "State",
+    key: "state",
+    scopedSlots: { customRender: "State name" },
+  },
+  {
+    title: "Country Name ",
+    dataIndex: "Country",
+    key: "country",
+    sorter: true,
+    scopedSlots: { customRender: "Country Name" },
   },
   {
     title: "Active Status",
     dataIndex: "",
     key: "x",
-    width: "10%",
     scopedSlots: { customRender: "Active Status" },
-  },
-  {
-    title: "State name",
-    dataIndex: "State",
-    key: "state",
-    width: "10%",
-    scopedSlots: { customRender: "State name" },
-  },
-  {
-    title: "Country name ",
-    dataIndex: "Country",
-    key: "country",
-    sorter: true,
-    scopedSlots: { customRender: "Country Name" },
   },
   {
     title: "Action",
@@ -169,21 +164,15 @@ const columns = [
 const data = [
   {
     id: "1",
-    name: "Dhaka",
-    Country: "France",
-    State: "Mosko",
+    name: "City 1",
+    State: "State 1",
+    Country: "Country 1",
   },
   {
     id: "2",
-    name: "Rajsahi",
-    Country: "Japan",
-    State: "Towkio",
-  },
-  {
-    id: "3",
-    name: "Sylhet",
-    Country: "Chaina",
-    State: "Byjing",
+    name: "City 2",
+    State: "State 2",
+    Country: "Country 2",
   },
 ];
 
